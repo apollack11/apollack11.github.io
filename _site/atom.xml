@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Scotch Jekyll Bootstrap</title>
+ <title>Adam Pollack Portfolio</title>
  <link href="http://scotch-io.github.io/atom.xml" rel="self"/>
  <link href="http://scotch-io.github.io/"/>
- <updated>2016-09-09T21:39:03-05:00</updated>
+ <updated>2016-09-09T22:35:40-05:00</updated>
  <id>http://scotch-io.github.io</id>
  <author>
-   <name>Nicholas Cerminara</name>
-   <email>nick@scotch.io</email>
+   <name>Adam Pollack</name>
+   <email>apollack11@gmail.com</email>
  </author>
 
  

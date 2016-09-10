@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Scotch Jekyll Bootstrap</title>
-    <description>An Open-Source Bootstrap 3 Jekyll Theme by Scotch</description>
+    <title>Adam Pollack Portfolio</title>
+    <description>Projects centered around software and robotics.</description>
     <link>http://scotch-io.github.io/</link>
     <atom:link href="http://scotch-io.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 09 Sep 2016 21:39:03 -0500</pubDate>
-    <lastBuildDate>Fri, 09 Sep 2016 21:39:03 -0500</lastBuildDate>
+    <pubDate>Fri, 09 Sep 2016 22:35:40 -0500</pubDate>
+    <lastBuildDate>Fri, 09 Sep 2016 22:35:40 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>

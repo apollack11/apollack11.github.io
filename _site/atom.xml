@@ -4,7 +4,7 @@
  <title>Adam Pollack</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2016-09-23T11:11:09-05:00</updated>
+ <updated>2016-09-23T11:43:15-05:00</updated>
  <id></id>
  <author>
    <name>Adam Pollack</name>
@@ -17,7 +17,9 @@
    <link href="/test-post.html"/>
    <updated>2016-09-23T05:46:00-05:00</updated>
    <id>/test-post</id>
-   <content type="html">&lt;p&gt;Steve Austin: Astronaut. A man barely alive. Gentlemen… we can rebuild him. We have the technology. We have the capability to make the world’s first bionic man. Steve Austin will be that man. Better than he was before. Better. Stronger. Faster.&lt;/p&gt;
+   <content type="html">&lt;p&gt;This is a test post to see if I can embed a vimeo video. It works!&lt;/p&gt;
+
+&lt;p&gt;Steve Austin: Astronaut. A man barely alive. Gentlemen… we can rebuild him. We have the technology. We have the capability to make the world’s first bionic man. Steve Austin will be that man. Better than he was before. Better. Stronger. Faster.&lt;/p&gt;
 
 &lt;p&gt;My name is Rhoda Morgenstern. I was born in the Bronx, New York in December of 1941. I’ve always felt responsible for World War II. The first thing I remember liking that liked me back was food. I had a bad puberty; it lasted seventeen years. I’m a high school graduate. I went to art school. My entrance exam was on a book of matches. I decided to move out of the house when I was twenty-four. My mother still refers to this as the time I ran away from home. Eventually, I ran to Minneapolis, where it’s cold and I figured I’d keep better. Now I’m back in Manhattan. New York, this is your last chance!&lt;/p&gt;
 
@@ -30,7 +32,7 @@
    <link href="/my-first-video-post.html"/>
    <updated>2015-08-31T08:26:34-05:00</updated>
    <id>/my-first-video-post</id>
-   <content type="html">&lt;p&gt;Steve Austin: Astronaut. A man barely alive. Gentlemen… we can rebuild him. We have the technology. We have the capability to make the world’s first bionic man. Steve Austin will be that man. Better than he was before. Better. Stronger. Faster.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Smaller amount of excerpt text. We’re not trying to say that much.&lt;/p&gt;
 
 &lt;p&gt;My name is Rhoda Morgenstern. I was born in the Bronx, New York in December of 1941. I’ve always felt responsible for World War II. The first thing I remember liking that liked me back was food. I had a bad puberty; it lasted seventeen years. I’m a high school graduate. I went to art school. My entrance exam was on a book of matches. I decided to move out of the house when I was twenty-four. My mother still refers to this as the time I ran away from home. Eventually, I ran to Minneapolis, where it’s cold and I figured I’d keep better. Now I’m back in Manhattan. New York, this is your last chance!&lt;/p&gt;
 

@@ -16,6 +16,10 @@ body {
     padding-top: 51px;
     -webkit-font-smoothing: antialiased;
 }
+// edits the defualt "container" div
+.container {
+  width: 85%;
+}
 p {
     margin-bottom: 30px;
 }
@@ -118,15 +122,16 @@ h1.special {
     position: relative;
     box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.135);
     margin-bottom: 125px;
+    height: 800px;
 
-    .inner-guts { padding: 50px; }
+    .inner-guts { padding: 25px; }
 
     h2 {
         margin: 0;
-        font-size: 100px;
+        font-size: 50px;
         font-weight: 400;
         letter-spacing: -0.05em;
-        line-height: 100px;
+        line-height: 50px;
     }
 
     .featurette {
@@ -135,7 +140,7 @@ h1.special {
         overflow: hidden;
         margin-bottom: 15px;
         width: 100%;
-        height: 550px;
+        height: 300px;
         background-color: #e8e8e8;
 
         .img {
@@ -186,9 +191,9 @@ h1.special {
     }
 
     .excerpt {
-        font-size: 35px;
+        font-size: 25px;
         font-weight: 300;
-        line-height: 49px;
+        line-height: 35px;
         color: #484848;
 
         p {
@@ -212,9 +217,9 @@ h1.special {
     }
 
     .read-more {
-        margin-top: 50px;
+        margin-top: 25px;
         width: 100%;
-        max-width: 175px;
+        max-width: 150px;
         position: relative;
         padding-right: 75px;
 
@@ -292,6 +297,9 @@ pre {
 
 
 @media only screen and (max-width : 991px) {
+    .container {
+      width: auto;
+    }
     pre {
         margin-left: 0;
         margin-right: 0;
@@ -299,10 +307,12 @@ pre {
 }
 
 @media only screen and (max-width : 480px) {
+    .container {
+      width: auto;
+    }
     .tile .featurette, .topper {
         height: 300px;
     }
-
     h1.special,
     .tile h2 {
         font-size: 40px;
@@ -310,11 +320,11 @@ pre {
     }
 
     .tile .inner-guts {
-        padding: 15px 25px;
+        padding: 10px 20px;
     }
 
     .tile .excerpt {
-        font-size: 22px;
-        line-height: 35px;
+        font-size: 18px;
+        line-height: 30px;
     }
 }

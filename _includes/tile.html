@@ -6,7 +6,12 @@
         {% endif %}
 
         {% if post.featured_video_id %}
-        <iframe src="https://www.youtube.com/embed/{{ post.featured_video_id }}" frameborder="0" allowfullscreen></iframe>
+          {% if post.video_format == "youtube" %}
+            <iframe src="https://www.youtube.com/embed/{{ post.featured_video_id }}" frameborder="0" allowfullscreen></iframe>
+          {% endif %}
+          {% if post.video_format == "vimeo" %}
+            <iframe src="https://player.vimeo.com/video/{{ post.featured_video_id }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          {% endif %}
         {% endif %}
     </a>
     {% endif %}

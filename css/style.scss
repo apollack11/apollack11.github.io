@@ -3,13 +3,11 @@
 @import '../_sass/bootstrap';
 @import '../_sass/syntax-highlighting';
 
-
 $scotch-primary: rgb(255, 69, 69);
 $scotch-secondary: #FF7B7B;
 
 %oswald { font-family: 'Oswald', sans-serif; }
 %roboto { font-family: 'Roboto Condensed', sans-serif; }
-
 
 body {
     @extend %roboto;
@@ -107,6 +105,7 @@ h1.special {
         &:after { right: 100%; }
     }
 }
+// group of icons pointing to social media sites
 .social-media-group {
   margin-top: 10px;
 }
@@ -114,6 +113,7 @@ h1.special {
   display: inline-block;
   margin: 5px;
 }
+//
 .tile {
     position: relative;
     box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.135);
@@ -244,6 +244,17 @@ aside {
 .site-footer {
     margin-top: 100px;
 }
+
+// group of icons pointing to social media sites in footer
+.footer-social-media-group {
+  text-align: right;
+}
+.footer-social-media-group > li {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+//
 
 .pagination-wrap {
     text-align: center;

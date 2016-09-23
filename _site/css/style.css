@@ -6123,6 +6123,14 @@ aside {
 .site-footer {
   margin-top: 100px; }
 
+.footer-social-media-group {
+  text-align: right; }
+
+.footer-social-media-group > li {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px; }
+
 .pagination-wrap {
   text-align: center; }
 

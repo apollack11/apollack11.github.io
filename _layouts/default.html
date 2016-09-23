@@ -3,13 +3,26 @@
     {% include title-group.html %}
 
     <main>
-      <div id="portfolio-gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% for post in paginator.posts %}
+                        {% include tile.html %}
+                    {% endfor %}
+
+                    {% include pagination.html %}
+                </div>
+            </div>
+        </div>
+    </main>
+
+      <!-- <div id="portfolio-gallery">
         {% for post in paginator.posts %}
         <div class="container">
           {% include tile.html %}
         </div>
         {% endfor %}
-      </div>
+      </div> -->
         <!--<div class="container">
           <div id="portfolio-gallery">
             {% for post in paginator.posts %}
@@ -18,7 +31,7 @@
               <div class="col-md-3">
                 {% include tile.html %}
               </div>
-                <!--<div class="col-md-12">
+                <div class="col-md-12">
                     {% for post in paginator.posts %}
                         {% include tile.html %}
                     {% endfor %}
@@ -30,6 +43,5 @@
           </div>
         </div>
       </div>-->
-    </main>
 
 {% include footer.html %}

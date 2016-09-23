@@ -5986,7 +5986,7 @@ nav.navbar {
 .title-group {
   text-align: center;
   padding: 0 15px;
-  margin: 50px 0 100px; }
+  margin: 50px 0 50px; }
   .title-group p {
     max-width: 800px;
     margin: 25px auto 0; }
@@ -6121,7 +6121,7 @@ aside {
     margin: 0 5px; }
 
 .site-footer {
-  margin-top: 200px; }
+  margin-top: 100px; }
 
 .pagination-wrap {
   text-align: center; }

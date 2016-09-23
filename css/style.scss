@@ -106,7 +106,13 @@ h1.special {
         &:after { right: 100%; }
     }
 }
-
+.social-media-group {
+  margin-top: 10px;
+}
+.social-media-group > li {
+  display: inline-block;
+  margin: 5px;
+}
 .tile {
     position: relative;
     box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.135);

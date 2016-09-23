@@ -1,7 +1,7 @@
 # Site Settings
-title: 'Adam Pollack Portfolio'
-description: 'Projects centered around software and robotics.'
-url: 'http://scotch-io.github.io' # the base hostname & protocol for your site
+title: 'Adam Pollack'
+# description: 'Projects centered around software and robotics.'
+# url: 'http://scotch-io.github.io' # the base hostname & protocol for your site
 footer_text: 'Site built using scotch.io Bootstrap theme.'
 
 # Admin Settings

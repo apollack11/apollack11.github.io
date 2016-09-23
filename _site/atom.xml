@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Adam Pollack Portfolio</title>
- <link href="http://scotch-io.github.io/atom.xml" rel="self"/>
- <link href="http://scotch-io.github.io/"/>
- <updated>2016-09-09T22:35:40-05:00</updated>
- <id>http://scotch-io.github.io</id>
+ <title>Adam Pollack</title>
+ <link href="/atom.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2016-09-23T10:14:40-05:00</updated>
+ <id></id>
  <author>
    <name>Adam Pollack</name>
    <email>apollack11@gmail.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>My First Video Post on Jekyll</title>
-   <link href="http://scotch-io.github.io/my-first-video-post.html"/>
+   <link href="/my-first-video-post.html"/>
    <updated>2015-08-31T08:26:34-05:00</updated>
-   <id>http://scotch-io.github.io/my-first-video-post</id>
+   <id>/my-first-video-post</id>
    <content type="html">&lt;p&gt;Steve Austin: Astronaut. A man barely alive. Gentlemen… we can rebuild him. We have the technology. We have the capability to make the world’s first bionic man. Steve Austin will be that man. Better than he was before. Better. Stronger. Faster.&lt;/p&gt;
 
 &lt;p&gt;My name is Rhoda Morgenstern. I was born in the Bronx, New York in December of 1941. I’ve always felt responsible for World War II. The first thing I remember liking that liked me back was food. I had a bad puberty; it lasted seventeen years. I’m a high school graduate. I went to art school. My entrance exam was on a book of matches. I decided to move out of the house when I was twenty-four. My mother still refers to this as the time I ran away from home. Eventually, I ran to Minneapolis, where it’s cold and I figured I’d keep better. Now I’m back in Manhattan. New York, this is your last chance!&lt;/p&gt;
@@ -28,9 +28,9 @@
  
  <entry>
    <title>My First Post on Jekyll</title>
-   <link href="http://scotch-io.github.io/example-post.html"/>
+   <link href="/example-post.html"/>
    <updated>2015-08-31T08:26:34-05:00</updated>
-   <id>http://scotch-io.github.io/example-post</id>
+   <id>/example-post</id>
    <content type="html">&lt;p&gt;Steve Austin: Astronaut. A man barely alive. Gentlemen… we can rebuild him. We have the technology. We have the capability to make the world’s first bionic man. Steve Austin will be that man. Better than he was before. Better. Stronger. Faster.&lt;/p&gt;
 
 &lt;p&gt;My name is Rhoda Morgenstern. I was born in the Bronx, New York in December of 1941. I’ve always felt responsible for World War II. The first thing I remember liking that liked me back was food. I had a bad puberty; it lasted seventeen years. I’m a high school graduate. I went to art school. My entrance exam was on a book of matches. I decided to move out of the house when I was twenty-four. My mother still refers to this as the time I ran away from home. Eventually, I ran to Minneapolis, where it’s cold and I figured I’d keep better. Now I’m back in Manhattan. New York, this is your last chance!&lt;/p&gt;
@@ -42,9 +42,9 @@
  
  <entry>
    <title>My First Normal Post on Jekyll</title>
-   <link href="http://scotch-io.github.io/my-first-normal-post.html"/>
+   <link href="/my-first-normal-post.html"/>
    <updated>2015-08-15T08:26:34-05:00</updated>
-   <id>http://scotch-io.github.io/my-first-normal-post</id>
+   <id>/my-first-normal-post</id>
    <content type="html">&lt;p&gt;Steve Austin: Astronaut. A man barely alive. Gentlemen… we can rebuild him. We have the technology. We have the capability to make the world’s first bionic man. Steve Austin will be that man. Better than he was before. Better. Stronger. Faster.&lt;/p&gt;
 
 &lt;p&gt;My name is Rhoda Morgenstern. I was born in the Bronx, New York in December of 1941. I’ve always felt responsible for World War II. The first thing I remember liking that liked me back was food. I had a bad puberty; it lasted seventeen years. I’m a high school graduate. I went to art school. My entrance exam was on a book of matches. I decided to move out of the house when I was twenty-four. My mother still refers to this as the time I ran away from home. Eventually, I ran to Minneapolis, where it’s cold and I figured I’d keep better. Now I’m back in Manhattan. New York, this is your last chance!&lt;/p&gt;

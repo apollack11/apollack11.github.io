@@ -6,8 +6,8 @@ Error: Invalid CSS after "...sass/bootstrap'": expected "{", was ";"
 2: ---
 3: @import '../_sass/bootstrap';
 4: @import '../_sass/syntax-highlighting';
-5: 
-6: 
+5:
+6:
 7: $scotch-primary: rgb(255, 69, 69);
 8: $scotch-secondary: #FF7B7B;
 

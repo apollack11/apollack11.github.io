@@ -4,7 +4,7 @@ title: 'Shape Stream'
 date: 2016-09-25 10:47:00
 categories: java
 tags: software shape stream
-featured_image: '{{ site.data.global.url }}/assets/feature_screen.png'
+featured_image: '/assets/feature_screen.png'
 lead_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita maiores quisquam id sunt, a architecto molestias velit, distinctio quidem non, nostrum provident quibusdam enim. Neque ipsam temporibus commodi facere minima.'
 ---
 

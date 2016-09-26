@@ -4,7 +4,7 @@ title: 'GreekPillar'
 date: 2016-09-25 10:46:00
 categories: angularjs html css
 tags: software startup greekpillar
-featured_image: '/assets/greek_pillars.jpg'
+featured_image: '{{ site.data.global.url }}/assets/greek_pillars.jpg'
 lead_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita maiores quisquam id sunt, a architecto molestias velit, distinctio quidem non, nostrum provident quibusdam enim. Neque ipsam temporibus commodi facere minima.'
 ---
 

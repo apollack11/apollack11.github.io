@@ -5,9 +5,68 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 23 Sep 2016 11:43:15 -0500</pubDate>
-    <lastBuildDate>Fri, 23 Sep 2016 11:43:15 -0500</lastBuildDate>
+    <pubDate>Sun, 25 Sep 2016 23:00:19 -0500</pubDate>
+    <lastBuildDate>Sun, 25 Sep 2016 23:00:19 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Shape Stream</title>
+        <description>&lt;p&gt;Shape Stream is a cross-platform mobile game for Android and iOS created in Java. The game was released in April 2016 and has over 400 total downloads.&lt;/p&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend ante ut pretium hendrerit. Nunc justo metus, pulvinar vitae iaculis in, bibendum pretium sapien. Suspendisse condimentum faucibus velit nec dapibus. Mauris semper neque eget odio commodo, vel sollicitudin elit accumsan. Pellentesque facilisis lobortis fringilla. Sed vulputate elit odio, nec mattis est fringilla sed. Ut convallis volutpat orci, quis lobortis neque faucibus sed. Integer tempor facilisis sem ut scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent augue nulla, pharetra at leo in, placerat dapibus ligula. Nulla id quam neque. In a lectus vel massa consectetur ultrices eget sed eros. Pellentesque bibendum tempus lorem, nec viverra turpis fringilla sed. Aliquam laoreet, metus a convallis feugiat, justo sem aliquam libero, et viverra nisl eros ut mi.&lt;/p&gt;
+
+&lt;p&gt;Curabitur ac purus nisi. Donec id diam ac diam viverra molestie at vitae diam. Maecenas ac ex ut orci facilisis feugiat vel ac lacus. Nullam lobortis porta lectus, finibus convallis ex maximus vitae. Quisque vel facilisis nisi. Suspendisse nec erat est. In turpis libero, viverra et pellentesque nec, porttitor quis libero. In elementum lorem ex, eget consectetur dolor bibendum vel. Suspendisse elit diam, volutpat scelerisque tincidunt sit amet, pharetra quis tellus.&lt;/p&gt;
+
+&lt;p&gt;Sed nec massa tincidunt, efficitur ante nec, fermentum turpis. Suspendisse in eleifend mauris, ut auctor ligula. Aliquam vitae nisl quis urna egestas imperdiet. Etiam sit amet ex nec libero placerat sodales non a magna. Mauris maximus dolor ac elementum rutrum. Maecenas sed porttitor purus. Fusce pellentesque odio vitae libero tincidunt, eget vulputate augue elementum. Sed commodo id metus dictum porttitor.&lt;/p&gt;
+
+&lt;p&gt;Checkout Shape Stream: &lt;br /&gt;
+iOS: &lt;a href=&quot;https://itunes.apple.com/td/app/shape-stream/id1095099500?mt=8&quot;&gt;App Store&lt;/a&gt; &lt;br /&gt;
+Android: &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.tea.game&amp;amp;hl=en&quot;&gt;Google Play Store&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 25 Sep 2016 05:47:00 -0500</pubDate>
+        <link>/shape-stream.html</link>
+        <guid isPermaLink="true">/shape-stream.html</guid>
+        
+        <category>software</category>
+        
+        <category>shape</category>
+        
+        <category>stream</category>
+        
+        
+        <category>java</category>
+        
+      </item>
+    
+      <item>
+        <title>GreekPillar</title>
+        <description>&lt;p&gt;GreekPillar is a software startup founded at Lehigh University. In Summer 2016, I worked for GreekPillar as a software developer doing work on their new platform.&lt;/p&gt;
+
+&lt;p&gt;Curabitur ac purus nisi. Donec id diam ac diam viverra molestie at vitae diam. Maecenas ac ex ut orci facilisis feugiat vel ac lacus. Nullam lobortis porta lectus, finibus convallis ex maximus vitae. Quisque vel facilisis nisi. Suspendisse nec erat est. In turpis libero, viverra et pellentesque nec, porttitor quis libero. In elementum lorem ex, eget consectetur dolor bibendum vel. Suspendisse elit diam, volutpat scelerisque tincidunt sit amet, pharetra quis tellus.&lt;/p&gt;
+
+&lt;p&gt;Sed nec massa tincidunt, efficitur ante nec, fermentum turpis. Suspendisse in eleifend mauris, ut auctor ligula. Aliquam vitae nisl quis urna egestas imperdiet. Etiam sit amet ex nec libero placerat sodales non a magna. Mauris maximus dolor ac elementum rutrum. Maecenas sed porttitor purus. Fusce pellentesque odio vitae libero tincidunt, eget vulputate augue elementum. Sed commodo id metus dictum porttitor.&lt;/p&gt;
+
+&lt;p&gt;Checkout GreekPillar’s Homepage: &lt;br /&gt;
+&lt;a href=&quot;https://greekpillar.com&quot;&gt;GreekPillar Website&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 25 Sep 2016 05:46:00 -0500</pubDate>
+        <link>/greekpillar.html</link>
+        <guid isPermaLink="true">/greekpillar.html</guid>
+        
+        <category>software</category>
+        
+        <category>startup</category>
+        
+        <category>greekpillar</category>
+        
+        
+        <category>angularjs</category>
+        
+        <category>html</category>
+        
+        <category>css</category>
+        
+      </item>
     
       <item>
         <title>Test Vimeo Post</title>
@@ -35,12 +94,14 @@
       </item>
     
       <item>
-        <title>My First Video Post on Jekyll</title>
-        <description>&lt;p&gt;Smaller amount of excerpt text. We’re not trying to say that much.&lt;/p&gt;
+        <title>Test YouTube Post</title>
+        <description>&lt;p&gt;Trying to embed a YouTube video. Working well!&lt;/p&gt;
 
-&lt;p&gt;My name is Rhoda Morgenstern. I was born in the Bronx, New York in December of 1941. I’ve always felt responsible for World War II. The first thing I remember liking that liked me back was food. I had a bad puberty; it lasted seventeen years. I’m a high school graduate. I went to art school. My entrance exam was on a book of matches. I decided to move out of the house when I was twenty-four. My mother still refers to this as the time I ran away from home. Eventually, I ran to Minneapolis, where it’s cold and I figured I’d keep better. Now I’m back in Manhattan. New York, this is your last chance!&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend ante ut pretium hendrerit. Nunc justo metus, pulvinar vitae iaculis in, bibendum pretium sapien. Suspendisse condimentum faucibus velit nec dapibus. Mauris semper neque eget odio commodo, vel sollicitudin elit accumsan. Pellentesque facilisis lobortis fringilla. Sed vulputate elit odio, nec mattis est fringilla sed. Ut convallis volutpat orci, quis lobortis neque faucibus sed. Integer tempor facilisis sem ut scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent augue nulla, pharetra at leo in, placerat dapibus ligula. Nulla id quam neque. In a lectus vel massa consectetur ultrices eget sed eros. Pellentesque bibendum tempus lorem, nec viverra turpis fringilla sed. Aliquam laoreet, metus a convallis feugiat, justo sem aliquam libero, et viverra nisl eros ut mi.&lt;/p&gt;
 
-&lt;p&gt;Dr. David Banner: physician; scientist. Searching for a way to tap into the hidden strengths that all humans have… then an accidental overdose of gamma radiation alters his body chemistry. And now when David Banner grows angry or outraged, a startling metamorphosis occurs. The creature is driven by rage and pursued by an investigative reporter. The creature is wanted for a murder he didn’t commit. David Banner is believed to be dead, and he must let the world think that he is dead, until he can find a way to control the raging spirit that dwells within him.&lt;/p&gt;
+&lt;p&gt;Curabitur ac purus nisi. Donec id diam ac diam viverra molestie at vitae diam. Maecenas ac ex ut orci facilisis feugiat vel ac lacus. Nullam lobortis porta lectus, finibus convallis ex maximus vitae. Quisque vel facilisis nisi. Suspendisse nec erat est. In turpis libero, viverra et pellentesque nec, porttitor quis libero. In elementum lorem ex, eget consectetur dolor bibendum vel. Suspendisse elit diam, volutpat scelerisque tincidunt sit amet, pharetra quis tellus.&lt;/p&gt;
+
+&lt;p&gt;Sed nec massa tincidunt, efficitur ante nec, fermentum turpis. Suspendisse in eleifend mauris, ut auctor ligula. Aliquam vitae nisl quis urna egestas imperdiet. Etiam sit amet ex nec libero placerat sodales non a magna. Mauris maximus dolor ac elementum rutrum. Maecenas sed porttitor purus. Fusce pellentesque odio vitae libero tincidunt, eget vulputate augue elementum. Sed commodo id metus dictum porttitor.&lt;/p&gt;
 </description>
         <pubDate>Mon, 31 Aug 2015 08:26:34 -0500</pubDate>
         <link>/my-first-video-post.html</link>
@@ -49,58 +110,6 @@
         <category>mars</category>
         
         <category>videos</category>
-        
-        
-        <category>blog</category>
-        
-        <category>development</category>
-        
-      </item>
-    
-      <item>
-        <title>My First Post on Jekyll</title>
-        <description>&lt;p&gt;Steve Austin: Astronaut. A man barely alive. Gentlemen… we can rebuild him. We have the technology. We have the capability to make the world’s first bionic man. Steve Austin will be that man. Better than he was before. Better. Stronger. Faster.&lt;/p&gt;
-
-&lt;p&gt;My name is Rhoda Morgenstern. I was born in the Bronx, New York in December of 1941. I’ve always felt responsible for World War II. The first thing I remember liking that liked me back was food. I had a bad puberty; it lasted seventeen years. I’m a high school graduate. I went to art school. My entrance exam was on a book of matches. I decided to move out of the house when I was twenty-four. My mother still refers to this as the time I ran away from home. Eventually, I ran to Minneapolis, where it’s cold and I figured I’d keep better. Now I’m back in Manhattan. New York, this is your last chance!&lt;/p&gt;
-
-&lt;p&gt;Dr. David Banner: physician; scientist. Searching for a way to tap into the hidden strengths that all humans have… then an accidental overdose of gamma radiation alters his body chemistry. And now when David Banner grows angry or outraged, a startling metamorphosis occurs. The creature is driven by rage and pursued by an investigative reporter. The creature is wanted for a murder he didn’t commit. David Banner is believed to be dead, and he must let the world think that he is dead, until he can find a way to control the raging spirit that dwells within him.&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 31 Aug 2015 08:26:34 -0500</pubDate>
-        <link>/example-post.html</link>
-        <guid isPermaLink="true">/example-post.html</guid>
-        
-        <category>cats</category>
-        
-        <category>dogs</category>
-        
-        <category>code</category>
-        
-        
-        <category>blog</category>
-        
-        <category>development</category>
-        
-      </item>
-    
-      <item>
-        <title>My First Normal Post on Jekyll</title>
-        <description>&lt;p&gt;Steve Austin: Astronaut. A man barely alive. Gentlemen… we can rebuild him. We have the technology. We have the capability to make the world’s first bionic man. Steve Austin will be that man. Better than he was before. Better. Stronger. Faster.&lt;/p&gt;
-
-&lt;p&gt;My name is Rhoda Morgenstern. I was born in the Bronx, New York in December of 1941. I’ve always felt responsible for World War II. The first thing I remember liking that liked me back was food. I had a bad puberty; it lasted seventeen years. I’m a high school graduate. I went to art school. My entrance exam was on a book of matches. I decided to move out of the house when I was twenty-four. My mother still refers to this as the time I ran away from home. Eventually, I ran to Minneapolis, where it’s cold and I figured I’d keep better. Now I’m back in Manhattan. New York, this is your last chance!&lt;/p&gt;
-
-&lt;p&gt;Dr. David Banner: physician; scientist. Searching for a way to tap into the hidden strengths that all humans have… then an accidental overdose of gamma radiation alters his body chemistry. And now when David Banner grows angry or outraged, a startling metamorphosis occurs. The creature is driven by rage and pursued by an investigative reporter. The creature is wanted for a murder he didn’t commit. David Banner is believed to be dead, and he must let the world think that he is dead, until he can find a way to control the raging spirit that dwells within him.&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 15 Aug 2015 08:26:34 -0500</pubDate>
-        <link>/my-first-normal-post.html</link>
-        <guid isPermaLink="true">/my-first-normal-post.html</guid>
-        
-        <category>html</category>
-        
-        <category>css</category>
-        
-        <category>javascript</category>
         
         
         <category>blog</category>

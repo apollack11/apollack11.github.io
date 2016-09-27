@@ -87,7 +87,7 @@ h1.special {
     line-height: 69px;
     font-weight: 700;
     color: $scotch-primary;
-    background-color: white;
+    background-color: white; // remove to reveal hr's again
 
     span {
         display: inline-block;

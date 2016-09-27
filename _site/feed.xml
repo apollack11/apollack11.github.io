@@ -3,10 +3,10 @@
   <channel>
     <title>Adam Pollack</title>
     <description></description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Sep 2016 23:00:19 -0500</pubDate>
-    <lastBuildDate>Sun, 25 Sep 2016 23:00:19 -0500</lastBuildDate>
+    <link>https://apollack11.github.io/</link>
+    <atom:link href="https://apollack11.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 26 Sep 2016 15:49:34 -0500</pubDate>
+    <lastBuildDate>Mon, 26 Sep 2016 15:49:34 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -24,8 +24,8 @@ iOS: &lt;a href=&quot;https://itunes.apple.com/td/app/shape-stream/id1095099500?
 Android: &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.tea.game&amp;amp;hl=en&quot;&gt;Google Play Store&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 05:47:00 -0500</pubDate>
-        <link>/shape-stream.html</link>
-        <guid isPermaLink="true">/shape-stream.html</guid>
+        <link>https://apollack11.github.io/shape-stream.html</link>
+        <guid isPermaLink="true">https://apollack11.github.io/shape-stream.html</guid>
         
         <category>software</category>
         
@@ -50,8 +50,8 @@ Android: &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.tea.
 &lt;a href=&quot;https://greekpillar.com&quot;&gt;GreekPillar Website&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 05:46:00 -0500</pubDate>
-        <link>/greekpillar.html</link>
-        <guid isPermaLink="true">/greekpillar.html</guid>
+        <link>https://apollack11.github.io/greekpillar.html</link>
+        <guid isPermaLink="true">https://apollack11.github.io/greekpillar.html</guid>
         
         <category>software</category>
         
@@ -79,8 +79,8 @@ Android: &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.tea.
 &lt;p&gt;Dr. David Banner: physician; scientist. Searching for a way to tap into the hidden strengths that all humans have… then an accidental overdose of gamma radiation alters his body chemistry. And now when David Banner grows angry or outraged, a startling metamorphosis occurs. The creature is driven by rage and pursued by an investigative reporter. The creature is wanted for a murder he didn’t commit. David Banner is believed to be dead, and he must let the world think that he is dead, until he can find a way to control the raging spirit that dwells within him.&lt;/p&gt;
 </description>
         <pubDate>Fri, 23 Sep 2016 05:46:00 -0500</pubDate>
-        <link>/test-post.html</link>
-        <guid isPermaLink="true">/test-post.html</guid>
+        <link>https://apollack11.github.io/test-post.html</link>
+        <guid isPermaLink="true">https://apollack11.github.io/test-post.html</guid>
         
         <category>vimeo</category>
         
@@ -104,8 +104,8 @@ Android: &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.tea.
 &lt;p&gt;Sed nec massa tincidunt, efficitur ante nec, fermentum turpis. Suspendisse in eleifend mauris, ut auctor ligula. Aliquam vitae nisl quis urna egestas imperdiet. Etiam sit amet ex nec libero placerat sodales non a magna. Mauris maximus dolor ac elementum rutrum. Maecenas sed porttitor purus. Fusce pellentesque odio vitae libero tincidunt, eget vulputate augue elementum. Sed commodo id metus dictum porttitor.&lt;/p&gt;
 </description>
         <pubDate>Mon, 31 Aug 2015 08:26:34 -0500</pubDate>
-        <link>/my-first-video-post.html</link>
-        <guid isPermaLink="true">/my-first-video-post.html</guid>
+        <link>https://apollack11.github.io/my-first-video-post.html</link>
+        <guid isPermaLink="true">https://apollack11.github.io/my-first-video-post.html</guid>
         
         <category>mars</category>
         

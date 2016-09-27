@@ -87,6 +87,7 @@ h1.special {
     line-height: 69px;
     font-weight: 700;
     color: $scotch-primary;
+    background-color: #e8e8e8;
 
     span {
         display: inline-block;
@@ -103,6 +104,7 @@ h1.special {
             width: 99999999px;
             top: 50%;
             transform: translateY(-50%);
+            z-index: -1;
         }
 
         &:before { left: 100%; }

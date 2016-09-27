@@ -6003,7 +6003,8 @@ h1.special {
   font-size: 69px;
   line-height: 69px;
   font-weight: 700;
-  color: #ff4545; }
+  color: #ff4545;
+  background-color: #e8e8e8; }
   h1.special span {
     display: inline-block;
     position: relative;
@@ -6017,7 +6018,8 @@ h1.special {
       background: #e8e8e8;
       width: 99999999px;
       top: 50%;
-      transform: translateY(-50%); }
+      transform: translateY(-50%);
+      z-index: -1; }
     h1.special span:before {
       left: 100%; }
     h1.special span:after {

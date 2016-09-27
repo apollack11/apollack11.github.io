@@ -6186,4 +6186,7 @@ pre {
 
   .tile .excerpt {
     font-size: 18px;
-    line-height: 30px; } }
+    line-height: 30px; }
+
+  h1.special span:before, h1.special span:after {
+    width: 0px; } }

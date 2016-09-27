@@ -327,4 +327,11 @@ pre {
         font-size: 18px;
         line-height: 30px;
     }
+    h1.special {
+      span {
+          &:before, &:after {
+              width: 0px;
+          }
+      }
+    }
 }

@@ -87,7 +87,7 @@ h1.special {
     line-height: 69px;
     font-weight: 700;
     color: $scotch-primary;
-    background-color: #e8e8e8;
+    background-color: white;
 
     span {
         display: inline-block;
@@ -328,12 +328,5 @@ pre {
     .tile .excerpt {
         font-size: 18px;
         line-height: 30px;
-    }
-    h1.special {
-      span {
-          &:before, &:after {
-              width: 0px;
-          }
-      }
     }
 }

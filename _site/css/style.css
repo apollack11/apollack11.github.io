@@ -6004,7 +6004,7 @@ h1.special {
   line-height: 69px;
   font-weight: 700;
   color: #ff4545;
-  background-color: #e8e8e8; }
+  background-color: white; }
   h1.special span {
     display: inline-block;
     position: relative;
@@ -6188,7 +6188,4 @@ pre {
 
   .tile .excerpt {
     font-size: 18px;
-    line-height: 30px; }
-
-  h1.special span:before, h1.special span:after {
-    width: 0px; } }
+    line-height: 30px; } }

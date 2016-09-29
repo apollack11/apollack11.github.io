@@ -4,12 +4,12 @@
         <span class="img" style="background-image: url('{{ page.featured_image }}');">
         {% endif %}
 
-        {% if post.featured_video_id %}
-          {% if post.video_format == "youtube" %}
-            <iframe src="https://www.youtube.com/embed/{{ post.featured_video_id }}" frameborder="0" allowfullscreen></iframe>
+        {% if page.featured_video_id %}
+          {% if page.video_format == "youtube" %}
+            <iframe src="https://www.youtube.com/embed/{{ page.featured_video_id }}" frameborder="0" allowfullscreen></iframe>
           {% endif %}
-          {% if post.video_format == "vimeo" %}
-            <iframe src="https://player.vimeo.com/video/{{ post.featured_video_id }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          {% if page.video_format == "vimeo" %}
+            <iframe src="https://player.vimeo.com/video/{{ page.featured_video_id }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           {% endif %}
         {% endif %}
     </div>

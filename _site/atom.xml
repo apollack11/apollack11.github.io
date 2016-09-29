@@ -4,7 +4,7 @@
  <title>Adam Pollack</title>
  <link href="https://apollack11.github.io/atom.xml" rel="self"/>
  <link href="https://apollack11.github.io/"/>
- <updated>2016-09-26T22:24:53-05:00</updated>
+ <updated>2016-09-29T11:27:18-05:00</updated>
  <id>https://apollack11.github.io</id>
  <author>
    <name>Adam Pollack</name>
@@ -64,9 +64,9 @@ Android: &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.tea.
  
  <entry>
    <title>Test YouTube Post</title>
-   <link href="https://apollack11.github.io/my-first-video-post.html"/>
+   <link href="https://apollack11.github.io/test-youtube-post.html"/>
    <updated>2015-08-31T08:26:34-05:00</updated>
-   <id>https://apollack11.github.io/my-first-video-post</id>
+   <id>https://apollack11.github.io/test-youtube-post</id>
    <content type="html">&lt;p&gt;Trying to embed a YouTube video. Working well!&lt;/p&gt;
 
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend ante ut pretium hendrerit. Nunc justo metus, pulvinar vitae iaculis in, bibendum pretium sapien. Suspendisse condimentum faucibus velit nec dapibus. Mauris semper neque eget odio commodo, vel sollicitudin elit accumsan. Pellentesque facilisis lobortis fringilla. Sed vulputate elit odio, nec mattis est fringilla sed. Ut convallis volutpat orci, quis lobortis neque faucibus sed. Integer tempor facilisis sem ut scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent augue nulla, pharetra at leo in, placerat dapibus ligula. Nulla id quam neque. In a lectus vel massa consectetur ultrices eget sed eros. Pellentesque bibendum tempus lorem, nec viverra turpis fringilla sed. Aliquam laoreet, metus a convallis feugiat, justo sem aliquam libero, et viverra nisl eros ut mi.&lt;/p&gt;

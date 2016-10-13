@@ -1,39 +1,31 @@
 ---
 layout: inner
-title: Contact
-permalink: /contact/
+title: About
+permalink: /about/
 ---
 
-We never thought of findin' a place where we belong. Don't have to stand alone, we'll never let you fall. Don't need permission to decide what you believe. You gotta learn something when we meet you after school. I said jump, down on Jump Street. I said jump, down on Jump Street. Your friends will be there when your back is to the wall. You'll find you'll need us cause there's no one else to call. When it was hopeless a decision is what you need. You'd better be ready cause' your runnin' outta time. Say jump, 21 Jump, Street.
+### Mailing Address  
+Adam Pollack  
+2002 Maple Ave  
+Apt 2F  
+Evanston, IL, 60201
 
-{% highlight javascript %}
-function meow() {
-    return 'meow';
-}
+### Bio
 
-function bark() {
-    return 'woof';
-}
+My name is Adam Pollack. I graduated from Lehigh University with a B.S. in Mechanical Engineering in May 2016. While at Lehigh, I took courses in mechanical engineering, computer science, and entrepreneurship. After completing two rotations of being an Co-Op Engineer focused on mechanical engineering and material science at a tubing manufacturer called RathGibson, I decided I wanted to shift my focus to integrate my love of computer science with my background in mechanical engineering. Having been part of a robotics team for four years in high school, robotics seemed like the perfect way to combine my two passions.
 
-function getRandomAnimal() {
+In my free time, I enjoy going to the gym, watching TV shows including Mr. Robot and Silicon Valley, and working on programming projects.
 
-    var animals = [
-        'aardvark',
-        'dog',
-        'hippo',
-        'lion',
-        'bear',
-        'zebra'
-    ];
+As a member of the MSR program, I hope to gain knowledge in embedded systems, machine learning, and path planning. I hope to find a career working for a company doing research into new robotics applications.
 
-    return animals[Math.floor(Math.random()*animals.length)];
-}
+I am currently actively seeking employment.
 
-console.log(meow());
-console.log(bark());
-console.log(getRandomAnimal());
-{% endhighlight %}
+**Professional Experience:**
 
-They arrived in fifty mother ships, offering their friendship and advance technology to Earth. Skeptical of the visitors, Mike Donovan and Juliet Parrish infiltrated their ranks and soon discovered some startling secrets. The resistance is all that stands between us... and the visitors.
+1. Software Developer, *GreekPillar LLC*
 
-Once in every lifetime, comes a love like this. Oh I need you, you need me, oh my darling can't you see. Young Ones. Darling we're the Young Ones. Young Ones. Shouldn't be afraid. To live, love, there's a song to be sung. Cause we may not be the Young Ones very long.
+In Summer 2016, I worked for a startup called GreekPillar working software solutions to help with fraternity recruitment. At GreekPillar, I worked with both founders to help bridge the gap between the business and programming side of their operations learning about both the back and front ends of web development. Based on market research, I designed and built a responsive UI for the platform which pulled data from a Robomongo database using AngularJS. I also used HTML/CSS and AngularJS to develop a dynamic form designer to allow campuses to customize their recruitment efforts.
+
+2. Co-Op Engineer, *RathGibson*
+
+In Fall 2014 and Summer 2015, I worked in the research and development area of a tubing manufacturer named RathGibson as part of Lehigh's Co-Op Program. While at RathGibson, I studied the materials science properties of tubing and conducted research into determining the burst pressure of a tube. Using data from the previous decade of burst testing performed at RathGibson as well as data from strain gages gathered during my own tests, I was able to formulate an equation to model the burst pressure of a tube based on other properties.

@@ -1,5 +1,5 @@
 main:
     # - { url: '/', text: 'Portfolio' }
     # - { url: '/about', text: 'About' }
-    - { url: '/contact', text: 'Contact' }
+    - { url: '/about', text: 'About/Contact' }
     - { url: '/AdamPollackResume.pdf', text: 'Resume'}

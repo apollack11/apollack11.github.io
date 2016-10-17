@@ -8,7 +8,7 @@ featured_image: '/assets/feature_screen.png'
 lead_text: 'iOS: <a href="https://itunes.apple.com/td/app/shape-stream/id1095099500?mt=8">App Store</a> -- Android: <a href="https://play.google.com/store/apps/details?id=com.tea.game&hl=en">Google Play Store</a>'
 ---
 
-Shape Stream is a cross-platform mobile game for Android and iOS created in Java. The game was released in April 2016 and has over 400 total downloads. 
+Shape Stream is a cross-platform mobile game for Android and iOS created in Java. The game was released in April 2016 and has over 400 total downloads.
 
 I began working on Shape Stream in January 2016 with Tyler Carrara and Eric Robinson, two friends from high school. We wanted to learn how to bring an application from idea to completion and thought that creating a mobile game would be an effective way to do so. None of us majored in Computer Science, but we were all familiar with programming and willing to learn the object-oriented programming necessary to produce the game. The project began with an idea of having the user interact with shapes falling from the top of the screen. Building on this idea, we brainstormed exactly what we wanted to include in the game. We determined how the user would score points, how they would lose lives, when the game would end, what power-ups we should include, and more.
 
@@ -17,8 +17,8 @@ I began working on Shape Stream in January 2016 with Tyler Carrara and Eric Robi
 </div>
 <div style="text-align: center;">
   <img src="/assets/concept-image1.png" alt="Shape Stream Concept 1" style="width: 300px; padding: 10px"/>
-  <img src="/assets/concept-image2.png" alt="Shape Stream Concept 1" style="width: 300px; padding: 10px"/>
-  <img src="/assets/concept-image3.png" alt="Shape Stream Concept 1" style="width: 300px; padding: 10px"/>
+  <img src="/assets/concept-image2.png" alt="Shape Stream Concept 2" style="width: 300px; padding: 10px"/>
+  <img src="/assets/concept-image3.png" alt="Shape Stream Concept 3" style="width: 300px; padding: 10px"/>
 </div>
 <br/>
 
@@ -37,9 +37,9 @@ We received great feedback from a number of friends and are currently working on
 </div>
 <div style="text-align: center;">
   <img src="/assets/ShapeStreamScreenshot1.png" alt="Shape Stream Screenshot 1" style="width: 300px; padding: 10px"/>
-  <img src="/assets/ShapeStreamScreenshot3.png" alt="Shape Stream Screenshot 1" style="width: 300px; padding: 10px"/>
-  <img src="/assets/ShapeStreamScreenshot4.png" alt="Shape Stream Screenshot 1" style="width: 300px; padding: 10px"/>
-  <img src="/assets/ShapeStreamScreenshot5.png" alt="Shape Stream Screenshot 1" style="width: 300px; padding: 10px"/>
+  <img src="/assets/ShapeStreamScreenshot3.png" alt="Shape Stream Screenshot 2" style="width: 300px; padding: 10px"/>
+  <img src="/assets/ShapeStreamScreenshot4.png" alt="Shape Stream Screenshot 3" style="width: 300px; padding: 10px"/>
+  <img src="/assets/ShapeStreamScreenshot5.png" alt="Shape Stream Screenshot 4" style="width: 300px; padding: 10px"/>
 </div>
 <br/>
 

@@ -6,7 +6,7 @@ categories: ROS robotics baxter
 tags: robotics
 video_format: youtube
 featured_video_id: 6UPHq3FVivk
-lead_text: '[Github Repo](https://github.com/BlakeStrebel/shell_game)'
+lead_text: '<a href="https://github.com/BlakeStrebel/shell_game">Github Repo</a>'
 ---
 
 Worked with a team to program a Baxter robot to play the Shell Game using the Robot Operating System.

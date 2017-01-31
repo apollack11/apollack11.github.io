@@ -1,7 +1,7 @@
 ---
 layout: inner
 title: 'Baxter Pick and Place'
-date: 2015-08-31 13:26:34
+date: 2015-12-20 13:26:34
 categories: ROS robotics baxter
 tags: robotics
 video_format: youtube

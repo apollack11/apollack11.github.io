@@ -5,9 +5,32 @@
     <description></description>
     <link>https://apollack11.github.io/</link>
     <atom:link href="https://apollack11.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 16 Oct 2016 22:32:30 -0500</pubDate>
-    <lastBuildDate>Sun, 16 Oct 2016 22:32:30 -0500</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
+    <pubDate>Mon, 30 Jan 2017 19:45:41 -0600</pubDate>
+    <lastBuildDate>Mon, 30 Jan 2017 19:45:41 -0600</lastBuildDate>
+    <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Baxter Pick and Place</title>
+        <description>&lt;p&gt;Worked with a team to program a Baxter robot to play the Shell Game using the Robot Operating System.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/BlakeStrebel/shell_game&quot;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;More info coming soon!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 20 Dec 2016 07:26:34 -0600</pubDate>
+        <link>https://apollack11.github.io/baxter-pick-and-place.html</link>
+        <guid isPermaLink="true">https://apollack11.github.io/baxter-pick-and-place.html</guid>
+        
+        <category>robotics</category>
+        
+        
+        <category>ROS</category>
+        
+        <category>robotics</category>
+        
+        <category>baxter</category>
+        
+      </item>
     
       <item>
         <title>Shape Stream</title>

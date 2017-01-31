@@ -70,3 +70,6 @@ kramdown:
 
 
 include: ['_pages']
+
+# Google services
+google_analytics: UA-91159222-1

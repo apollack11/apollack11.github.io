@@ -2,7 +2,7 @@
 layout: inner
 title: 'Baxter Pick and Place'
 date: 2016-12-20 13:26:34
-categories: ROS robotics baxter
+categories: ROS python baxter
 tags: robotics
 video_format: youtube
 featured_video_id: 6UPHq3FVivk

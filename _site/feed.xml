@@ -5,8 +5,8 @@
     <description></description>
     <link>https://apollack11.github.io/</link>
     <atom:link href="https://apollack11.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 Jan 2017 19:05:30 -0600</pubDate>
-    <lastBuildDate>Tue, 31 Jan 2017 19:05:30 -0600</lastBuildDate>
+    <pubDate>Tue, 31 Jan 2017 19:44:42 -0600</pubDate>
+    <lastBuildDate>Tue, 31 Jan 2017 19:44:42 -0600</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -26,7 +26,7 @@
         
         <category>ROS</category>
         
-        <category>robotics</category>
+        <category>python</category>
         
         <category>baxter</category>
         

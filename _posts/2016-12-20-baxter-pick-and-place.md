@@ -6,7 +6,7 @@ categories: ROS python baxter
 tags: robotics
 video_format: youtube
 featured_video_id: 6UPHq3FVivk
-lead_text: '<a href="https://github.com/BlakeStrebel/shell_game">Github Repo</a>'
+lead_text: 'Final project for Northwestern ME495: Embedded Systems in Robotics'
 ---
 
 Worked with a team to program a Baxter robot to play the Shell Game using the Robot Operating System.

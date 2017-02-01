@@ -9,7 +9,7 @@
     <!-- Meta -->
     <meta charset="utf-8">
 
-    <title>Baxter Pick and Place</title>
+    <title>Hockey Simulation</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -115,12 +115,9 @@
     
     <div class="topper">
         
-
+          <span class="img" style="background-image: url('https://apollack11.github.io/assets/puck_crossbar.gif');"></span>
         
-          
-            <iframe src="https://www.youtube.com/embed/6UPHq3FVivk" frameborder="0" allowfullscreen></iframe>
-          
-          
+
         
     </div>
 
@@ -129,7 +126,7 @@
     <h1 class="special">
         <span>
         
-            Baxter Pick and Place
+            Hockey Simulation
         
         </span>
     </h1>
@@ -149,22 +146,20 @@
     </div>
     
     <aside>
-        12.20.16
+        12.21.16
         
             &middot;
             
-                <span>ROS</span>
+                <span>mathematica</span>
             
-                <span>python</span>
-            
-                <span>baxter</span>
+                <span>Euler-Lagrange</span>
             
         
     </aside>
     
     <p class="lead">
         
-            Final project for Northwestern ME495: Embedded Systems in Robotics
+            Final project for Northwestern ME314: Machine Dynamics
         
     </p>
 </div>
@@ -174,11 +169,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <p>Worked with a team to program a Baxter robot to play the Shell Game using the Robot Operating System.</p>
+                    <p>Mathematica simulation of a hockey puck hitting the crossbar of a goal.</p>
 
-<p><a href="https://github.com/BlakeStrebel/shell_game">Github Repo</a></p>
+<div style="text-align: center;">
+  <img src="/assets/hockey_simulation.gif" alt="Hockey Simulation" style="width: auto; padding: 10px" />
+</div>
 
-<p>More info coming soon!</p>
+<h3 id="description">Description</h3>
+<p>The goal of this project was to simulate a hockey stick striking a puck at an angle and having the puck hit the crossbar of a goal. The simulation models the system from the side. From this view, there is a hockey stick, a puck, and a goal. The hockey stick is modeled as a pendulum which has an external force acting on it to simulate a player swinging a real hockey stick. The puck is a rectangle from the side view and thus has rotational and translational kinetic energy upon being hit and hitting the crossbar. In reality, the flex of a hockey stick upon impact with the puck would cause the puck to gain the lift necessary for it to travel from ice-level to the height of the crossbar. To simplify things in this simulation, the puck has an initial angle necessary to cover that vertical distance. The crossbar itself is a cylindrical object which viewed from the side is a circle.</p>
+
+<h3 id="euler-lagrange-equations">Euler-Lagrange Equations</h3>
+<p>This dynamic system was modeled using the Euler-Lagrange method which was calculated using the kinetic energy and potential energy of both the stick and the puck. For both I used the twist matrix (V) and the inertia matrix (Itot) to calculate kinetic energy and I used the mass of each and their vertical positions (y) to calculate potential energy.</p>
+
+<h3 id="constraints">Constraints</h3>
+<p>There are two impacts in the system: one in which the hockey stick strikes the puck and another in which the hockey puck strikes the crossbar. For the first impact, I attempted to model my constraint as point at which the front edge of the hockey stick meets the rear edge of the puck. For the second impact, I used the point at which the front edge of the puck meets the x-location of the front of the crossbar as my constraint.</p>
+
+<h3 id="external-forces">External Forces</h3>
+<p>The hockey stick has a constant force applied of 243.5N. This force was
+chosen to create a tangential velocity of 100mph (44.704m/s) at the end of the stick when it
+contacts the puck.</p>
 
                 </div>
             </div>

@@ -1,7 +1,9 @@
 {% if page.featured_image or page.featured_video_id %}
     <div class="topper">
-        {% if page.featured_image %}
-        <span class="img" style="background-image: url('{{ page.featured_image }}');">
+        {% if page.featured_image_alternate %}
+          <span class="img" style="background-image: url('{{ page.featured_image_alternate | prepend: site.data.global.url }}');"></span>
+        {% elsif page.featured_image %}
+          <span class="img" style="background-image: url('{{ page.featured_image | prepend: site.data.global.url }}');"></span>
         {% endif %}
 
         {% if page.featured_video_id %}

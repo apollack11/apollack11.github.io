@@ -1,9 +1,7 @@
 <div class="tile">
     {% if post.featured_image or post.featured_video_id %}
     <a href="{{ post.url | prepend: site.baseurl }}" class="featurette">
-        {% if post.featured_image_alternate %}
-          <span class="img" style="background-image: url('{{ post.featured_image_alternate | prepend: site.data.global.url }}');"></span>
-        {% elsif post.featured_image %}
+        {% if post.featured_image %}
           <span class="img" style="background-image: url('{{ post.featured_image | prepend: site.data.global.url }}');"></span>
         {% endif %}
 

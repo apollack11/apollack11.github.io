@@ -2,14 +2,18 @@
 layout: inner
 title: 'Hockey Simulation'
 date: 2016-12-21 10:46:00
-categories: mathematica lagrangian dynamics
+categories: mathematica Euler-Lagrange
 tags: dynamics
 featured_image: '/assets/puck_crossbar.gif'
-featured_image_alternate: '/assets/hockey_simulation.gif'
+featured_image_alternate2: '/assets/hockey_simulation.gif'
 lead_text: 'Final project for Northwestern ME314: Machine Dynamics'
 ---
 
 Mathematica simulation of a hockey puck hitting the crossbar of a goal.
+
+<div style="text-align: center;">
+  <img src="/assets/hockey_simulation.gif" alt="Hockey Simulation" style="width: auto; padding: 10px"/>
+</div>
 
 ### Description
 The goal of this project was to simulate a hockey stick striking a puck at an angle and having the puck hit the crossbar of a goal. The simulation models the system from the side. From this view, there is a hockey stick, a puck, and a goal. The hockey stick is modeled as a pendulum which has an external force acting on it to simulate a player swinging a real hockey stick. The puck is a rectangle from the side view and thus has rotational and translational kinetic energy upon being hit and hitting the crossbar. In reality, the flex of a hockey stick upon impact with the puck would cause the puck to gain the lift necessary for it to travel from ice-level to the height of the crossbar. To simplify things in this simulation, the puck has an initial angle necessary to cover that vertical distance. The crossbar itself is a cylindrical object which viewed from the side is a circle.

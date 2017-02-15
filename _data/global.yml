@@ -8,3 +8,9 @@ footer_text: 'Site built using scotch.io Bootstrap theme.'
 # Admin Settings
 admin_name: 'Adam Pollack'
 admin_email: 'apollack11@gmail.com'
+
+# Social Media Links
+linkedin: 'https://linkedin.com/in/apollack11'
+github: 'https://github.com/apollack11'
+vimeo: 'https://vimeo.com/adampollack'
+email: 'mailto:apollack11@gmail.com'

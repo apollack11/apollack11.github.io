@@ -2,7 +2,7 @@
 layout: inner
 title: 'Shape Stream'
 date: 2016-10-13 12:07:00
-categories: java
+categories: java git
 tags: software shape stream
 featured_image: '/assets/feature_screen.png'
 lead_text: 'iOS: <a href="https://itunes.apple.com/td/app/shape-stream/id1095099500?mt=8">App Store</a> -- Android: <a href="https://play.google.com/store/apps/details?id=com.tea.game&hl=en">Google Play Store</a>'

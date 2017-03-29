@@ -1,6 +1,6 @@
 ---
 layout: inner
-title: 'Stabilizing Noisy IMU Data Using Optical Flow'
+title: 'Estimating Odometry Using Optical Flow'
 date: 2017-03-29 10:29:00
 categories: Python C++ OpenCV
 tags: Computer Vision

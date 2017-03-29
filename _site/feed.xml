@@ -5,12 +5,12 @@
     <description></description>
     <link>https://apollack11.github.io/</link>
     <atom:link href="https://apollack11.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Mar 2017 12:19:56 -0500</pubDate>
-    <lastBuildDate>Wed, 29 Mar 2017 12:19:56 -0500</lastBuildDate>
+    <pubDate>Wed, 29 Mar 2017 14:43:38 -0500</pubDate>
+    <lastBuildDate>Wed, 29 Mar 2017 14:43:38 -0500</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
-        <title>Stabilizing Noisy IMU Data Using Optical Flow</title>
+        <title>Estimating Odometry Using Optical Flow</title>
         <description>&lt;p&gt;Using optical flow and an extended Kalman filter to generate more accurate odometry of a Jackal robot.&lt;/p&gt;
 
 &lt;p&gt;Final GitHub Repo: &lt;a href=&quot;https://github.com/apollack11/advanced-computer-vision&quot;&gt;advanced-computer-vision&lt;/a&gt;&lt;/p&gt;

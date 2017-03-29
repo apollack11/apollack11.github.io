@@ -2,7 +2,7 @@
 layout: inner
 title: 'Estimating Odometry Using Optical Flow'
 date: 2017-03-29 10:29:00
-categories: Python C++ OpenCV
+categories: Python C++ OpenCV ROS
 tags: Computer Vision
 featured_image: '/assets/jackal.jpg'
 lead_text: 'Final Project for EECS432: Advanced Computer Vision'

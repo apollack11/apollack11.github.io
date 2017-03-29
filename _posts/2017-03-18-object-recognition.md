@@ -62,7 +62,7 @@ I also started looking into object recognition through Tensorflow. I started by 
 - Improve robustness by collecting a wider variety of images
 - Implement object recognition with the Baxter robot in our lab
 
+
 **References**  
 [1] Kitani, Kris. "Bag-of-Visual-Words." _Carnegie Mellon University_. Web. <http://www.cs.cmu.edu/~16385/lectures/Lecture12.pdf>.
-
 [2] Lowe, David G. "Object Recognition from Local Scale-Invariant Features." _Proceedings of the Seventh IEEE International Conference on Computer Vision_ (1999): n. pag. Web.

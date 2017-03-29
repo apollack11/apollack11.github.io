@@ -1,0 +1,294 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html itemscope itemtype="http://schema.org/Article" id="ie6" class="ie ie-old" lang="en-US"><![endif]-->
+<!--[if IE 7 ]>   <html itemscope itemtype="http://schema.org/Article" id="ie7" class="ie ie-old" lang="en-US"><![endif]-->
+<!--[if IE 8 ]>   <html itemscope itemtype="http://schema.org/Article" id="ie8" class="ie ie-old" lang="en-US"><![endif]-->
+<!--[if IE 9 ]>   <html itemscope itemtype="http://schema.org/Article" id="ie9" class="ie" lang="en-US"><![endif]-->
+<!--[if gt IE 9]><!--><html itemscope itemtype="http://schema.org/Article" lang="en-US"><!--<![endif]-->
+<head>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+
+    <title>Stabilizing Noisy IMU Data Using Optical Flow</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- NOT NEEDED NOW, MAYBE EVENTUALLY -->
+    <!-- RSS
+    <link rel="alternate" type="application/rss+xml" title="Adam Pollack" href="https://apollack11.github.io/feed.xml">
+    <link rel="alternate" type="application/atom+xml" title="Adam Pollack" href="https://apollack11.github.io/atom.xml">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64 96x96" href="https://apollack11.github.io/assets/favicon.ico?">
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="https://apollack11.github.io/img/favicons/favicon-57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://apollack11.github.io/img/favicons/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://apollack11.github.io/img/favicons/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://apollack11.github.io/img/favicons/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://apollack11.github.io/img/favicons/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="https://apollack11.github.io/img/favicons/favicon-96.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://apollack11.github.io/img/favicons/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://apollack11.github.io/img/favicons/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://apollack11.github.io/img/favicons/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://apollack11.github.io/img/favicons/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://apollack11.github.io/img/favicons/favicon-180.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="https://apollack11.github.io/img/favicons/favicon-192.png"> -->
+
+    <!-- Site Description
+    <meta name="application-name" content="Adam Pollack ♥ ">
+    <meta name="msapplication-TileImage" content="https://apollack11.github.io/img/favicons/favicon-144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+<!-- NOT NEEDED NOW, MAYBE EVENTUALLY -->
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic,700,700italic|Oswald:300,400,700">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://apollack11.github.io/css/style.css">
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://apollack11.github.io/js/respond.min.js"></script>
+    <![endif]-->
+
+    
+
+</head>
+<body class="">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Adam Pollack</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                        <li>
+                          
+                            <a href="/about">About Me</a>
+                          
+                        </li>
+                    
+                        <li>
+                          
+                            <a href="/AdamPollackResume.pdf" target="_blank">Resume</a>
+                          
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--
+      /$$$$$$                        /$$               /$$
+     /$$__  $$                      | $$              | $$
+    | $$  \__/  /$$$$$$$  /$$$$$$  /$$$$$$    /$$$$$$$| $$$$$$$
+    |  $$$$$$  /$$_____/ /$$__  $$|_  $$_/   /$$_____/| $$__  $$
+     \____  $$| $$      | $$  \ $$  | $$    | $$      | $$  \ $$
+     /$$  \ $$| $$      | $$  | $$  | $$ /$$| $$      | $$  | $$
+    |  $$$$$$/|  $$$$$$$|  $$$$$$/  |  $$$$/|  $$$$$$$| $$  | $$
+     \______/  \_______/ \______/    \___/   \_______/|__/  |__/
+
+
+
+        /$$$$$           /$$                 /$$ /$$
+       |__  $$          | $$                | $$| $$
+          | $$  /$$$$$$ | $$   /$$ /$$   /$$| $$| $$
+          | $$ /$$__  $$| $$  /$$/| $$  | $$| $$| $$
+     /$$  | $$| $$$$$$$$| $$$$$$/ | $$  | $$| $$| $$
+    | $$  | $$| $$_____/| $$_  $$ | $$  | $$| $$| $$
+    |  $$$$$$/|  $$$$$$$| $$ \  $$|  $$$$$$$| $$| $$
+     \______/  \_______/|__/  \__/ \____  $$|__/|__/
+                                   /$$  | $$
+                                  |  $$$$$$/
+                                   \______/
+    -->
+
+
+    
+    <div class="topper">
+        
+          <span class="img" style="background-image: url('https://apollack11.github.io/assets/jackal.jpg');"></span>
+        
+
+        
+    </div>
+
+
+<div class="title-group">
+    <h1 class="special">
+        <span>
+        
+            Stabilizing Noisy IMU Data Using Optical Flow
+        
+        </span>
+    </h1>
+    <div class="social-media-group">
+      <li>
+        <a href="https://linkedin.com/in/apollack11" target="_blank"><span class="fa fa-linkedin" style="font-size: 1.5em"></span></a>
+      </li>
+      <li>
+        <a href="https://github.com/apollack11" target="_blank"><span class="fa fa-github" style="font-size: 1.5em"></span></a>
+      </li>
+      <!-- <li>
+        <a href="https://vimeo.com/adampollack" target="_blank"><span class="fa fa-vimeo" style="font-size: 1.5em"></span></a>
+      </li> -->
+      <li>
+        <a href="mailto:apollack11@gmail.com" target="_blank"><span class="fa fa-envelope" style="font-size: 1.5em"></span></a>
+      </li>
+    </div>
+    
+    <aside>
+        03.29.17
+        
+            &middot;
+            
+                <span>Python</span>
+            
+                <span>C++</span>
+            
+                <span>OpenCV</span>
+            
+        
+    </aside>
+    
+    <p class="lead">
+        
+            Final Project for EECS432: Advanced Computer Vision
+        
+    </p>
+</div>
+
+
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p>Using optical flow and an extended Kalman filter to generate more accurate odometry of a Jackal robot.</p>
+
+<p>Final GitHub Repo: <a href="https://github.com/apollack11/advanced-computer-vision">advanced-computer-vision</a></p>
+
+<p>In collaboration with Nate Kaiser.</p>
+
+<h3 id="summary">Summary</h3>
+<p>We demonstrated a system which uses vision processing techniques to improve the estimation of the state of a Jackal UGV from Clearpath Robotics. We applied feature tracking, optical flow, and perspective transform to derive the estimated motion of the robot from a camera alone. This motion estimation is then combined with data from an inertial measurement unit (IMU) in an extended Kalman filter (EKF) through a process called sensor fusion in order to provide a more accurate estimation of the robot’s state. We primarily focused on solutions which are computationally cheap and can be implemented on the Jackal’s onboard computer.</p>
+
+<h3 id="motivation">Motivation</h3>
+<p>The Jackal UGV is made primarily to be an entry-level research robot which has an onboard computer, GPS, and inertial measurement unit (IMU) integrated with the Robot Operating System (ROS). The inertial measurement unit, which was the focus of our project, contains sensors which measure the orientation, angular velocity, and linear acceleration of the robot. Through our work with Jackal, we found that the IMU on board often takes noisy measurements which contain inaccuracies and drift. We wanted to develop a fully working system which could compensate for this IMU noise by utilizing an optical camera. Through only measurements from the optical camera and the IMU we sought to filter the data gathered about the odometry of the robot in order to make better predictions about its location in the real world.</p>
+
+<h3 id="methods">Methods</h3>
+<h4 id="code-overview">Code Overview</h4>
+<p><strong>C++/Python:</strong> For the computer vision portion, we wrote code in C++ because the algorithms we are using tend to be very computationally intensive. Python was used to perform sensor fusion, tie in functionality from ROS, and collect data when necessary. Using a combination of programming languages allowed us to code for efficiency or speed depending on the application, and with ROS, the integration of these languages was seamless.<br />
+<strong>Robot Operating System (ROS):</strong> ROS allowed us to write individual nodes which perform different computations, and then pass data easily between nodes using publishers and subscribers. We chose to use ROS because it is commonly applied to robotic systems and because we wrote our code in both C++ and Python, it enabled easier data transfer.<br />
+<strong>OpenCV:</strong> OpenCV is a commonly used computer vision library which happens to work very well with Python, C++, and ROS, so it was a great choice to handle some of our vision applications.</p>
+
+<h4 id="feature-tracking">Feature Tracking</h4>
+<p>In order to derive motion from a video feed, we first had to determine which features we wanted to track in the image. To do this we looked into the Shi-Tomasi paper titled Good Features to Track<sup>[1]</sup>. In this paper, Jianbo Shi and Carlo Tomasi outline methods to determine which features of an image are unique enough to be identified in multiple pictures of the same scene. Figure 1 shows the results of the Shi-Tomasi Method.</p>
+
+<div style="text-align: center;">
+  <img src="/assets/feature-tracking.png" alt="Feature Tracking Results" style="width: 300px; padding: 10px" />
+  <p>Figure 1: Feature Tracking Results</p>
+</div>
+
+<h4 id="calculating-optical-flow">Calculating Optical Flow</h4>
+<p>To calculate optical flow, we used the Lucas-Kanade Method. The Lucas-Kanade Method uses the assumption that all neighboring pixels will have similar motion to extract optical flow. Their method assigns a weight function to the pixels and then uses the Weighted Least Squares method to formulate an equation to derive motion<sup>[2]</sup>.</p>
+
+<h4 id="extracting-motion">Extracting Motion</h4>
+<p>We used perspective transform to extract motion from our optical flow data. The perspective transform method relies on relating the pixel coordinates (u, v) to world coordinates (x, y, z). This relationship is desirable because we already have the motion of the camera in (u, v) coordinates from optical flow so a simple transformation from pixel to world coordinates would provide the information we need. Finding the desired transformation required only taking some measurements relating the camera to the ground.</p>
+
+<h4 id="sensor-fusion">Sensor Fusion</h4>
+<p>Sensor fusion is the combination of measurements from multiple different sensors to create a more accurate measurement<sup>[3]</sup>. The more accurate estimation is derived using an Extended Kalman Filter based on the input measurements. Since the goal of our project is to stabilize noisy IMU data, we looked at performing sensor fusion using data from the inertial measurement unit on board Jackal and the extracted motion from our optical flow calculations above. The figure below shows the basic principle behind sensor fusion in which two sets of data (pink and red) are fused to form the estimation (green).</p>
+
+<div style="text-align: center;">
+  <img src="/assets/sensor-fusion-example.png" alt="Sensor Fusion Example" style="width: 300px; padding: 10px" />
+  <p>Figure 2: Sensor Fusion Example</p>
+</div>
+
+<h3 id="results">Results</h3>
+<h4 id="testing-details">Testing Details</h4>
+<p>We gathered data for four different test cases including stationary, normal driving, aggressive driving, and random driving. The stationary test case consisted of not moving the robot. Normal driving involved driving the robot around at a medium speed and making gradual turns. Aggressive driving included forward and backward motion at the highest speed as well as some quick turns. And finally, random driving consisted of a mix between slow and fast driving and quick and slow turns. For each test, we collected odometry data from the IMU alone, the IMU fused with optical flow data, and the wheel odometry built-in to Jackal’s codebase. Below are three graphs of results we collected.</p>
+
+<div style="text-align: center;">
+  <img src="/assets/stationary_position_estimation.png" alt="Stationary Position Estimation Results" style="width: 300px; padding: 10px" />
+  <p>Figure 3: Stationary Position Estimation</p>
+</div>
+
+<p>Figure 3 shows that the visual-inertial odometry filters out almost all of the noise and drift accrued using the IMU alone. The robot is not moving, so the x-position for all three cases should show a reading very close to zero. The encoder-inertial performed as expected given that the encoders should be reading a constant, zero value for x-position. Our visual-inertial reading performed nearly identically to the encoder-inertial results which suggests that our optical flow calculations improved the IMU data.</p>
+
+<div style="text-align: center;">
+  <img src="/assets/aggressive_position_estimation.png" alt="Aggressive Driving Position Estimation Results" style="width: 300px; padding: 10px" />
+  <p>Figure 4: Aggressive Driving Position Estimation</p>
+</div>
+
+<p>Figure 4 shows the position estimation for the aggressive driving test case. For this case, the IMU data has again drifted completely away from the visual-inertial and encoder-inertial odometry. However, aggressive driving also demonstrated a discrepancy between the encoder and visual odometry cases. The difference between the two results is most likely due to the inaccuracies of the encoder when the wheels are slipping and the inaccuracies of optical flow when at high speeds. The actual position is likely in between these two results.</p>
+
+<div style="text-align: center;">
+  <img src="/assets/random_heading_estimation.png" alt="Rnadom Driving Heading Estimation Results" style="width: 300px; padding: 10px" />
+  <p>Figure 5: Random Driving Heading Estimation</p>
+</div>
+
+<p>Figure 5 is a graph of the heading estimation (yaw-position) for the random movement case. Even though the driving for this case was sporadic and unpredictable, all three odometry estimates track together. This suggests that the IMU alone performs similarly to the visual-inertial and encoder-inertial estimates when measuring rotation.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>Our original goal was to filter noisy IMU data using optical flow, and we believe we accomplished this effectively. Compared to inertial odometry alone, visual-inertial odometry was able to limit drift and provide a more accurate estimate of position. Our solution was simple, computationally efficient, and fairly robust as a fully working system. The code was developed using ROS and OpenCV, so it is easily extendable by anyone interested in making modifications or improvements to our results. The code can be found on GitHub <a href="https://github.com/apollack11/advanced-computer-vision">here</a>.</p>
+
+<h3 id="future-work">Future Work</h3>
+<ul>
+  <li>Including encoder data into our sensor fusion calculations would improve accuracy by providing another estimation of odometry</li>
+</ul>
+
+<p><strong>References</strong><br />
+[1] Shi, Jianbo, and Tomasi. “Good Features To Track.” Proceedings of IEEE Conference on Computer Vision and Pattern Recognition CVPR-94 (1994): n. pag. Web.<br />
+[2] Wu, Ying. “Differential Motion Analysis (I)”. EECS432 Lecture 5. Tech Room L170, Evanston, IL. 24 Jan. 2017. Lecture.<br />
+[3] Moran, Antonio, Ph.D. <em>Sensor Data Fusion Using Kalman Filters.</em> IEEE, 24 May 2013. Web. <a href="https://www.slideshare.net/antoniomorancardenas/data-fusion-with-kalman-filtering">https://www.slideshare.net/antoniomorancardenas/data-fusion-with-kalman-filtering</a>.</p>
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <footer class="site-footer">
+        <div class="container">
+              <div class="row">
+                <div class="col-md-9">
+                  <p class="text-muted footer-text">Site built using scotch.io Bootstrap theme.</p>
+                </div>
+                <div class="col-md-3">
+                  <div class="footer-social-media-group">
+                    <li>
+                      <a href="https://linkedin.com/in/apollack11" target="_blank"><span class="fa fa-linkedin"></span></a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/apollack11" target="_blank"><span class="fa fa-github"></span></a>
+                    </li>
+                    <!-- <li>
+                      <a href="https://vimeo.com/adampollack" target="_blank"><span class="fa fa-vimeo"></span></a>
+                    </li> -->
+                    <li>
+                      <a href="mailto:apollack11@gmail.com" target="_blank"><span class="fa fa-envelope"></span></a>
+                    </li>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://apollack11.github.io/js/power.js"></script>
+
+    </body>
+</html>
+

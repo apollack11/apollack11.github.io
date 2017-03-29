@@ -6035,16 +6035,16 @@ h1.special {
 .tile {
   position: relative;
   box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.135);
-  margin-bottom: 50px;
-  height: 800px; }
+  margin-bottom: 35px;
+  height: 660px; }
   .tile .inner-guts {
     padding: 25px; }
   .tile h2 {
     margin: 0;
-    font-size: 50px;
     font-weight: 400;
     letter-spacing: -0.05em;
-    line-height: 50px; }
+    font-size: 38px;
+    line-height: 42px; }
   .tile .featurette {
     position: relative;
     display: block;
@@ -6088,9 +6088,9 @@ h1.special {
       .tile .featurette:hover .img:before {
         opacity: 0.2; }
   .tile .excerpt {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 300;
-    line-height: 35px;
+    line-height: 32px;
     color: #484848; }
     .tile .excerpt p {
       margin: 0; }
@@ -6105,7 +6105,8 @@ h1.special {
       line-height: 1.5;
       text-transform: uppercase; }
   .tile .read-more {
-    margin-top: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     width: 100%;
     max-width: 150px;
     position: relative;
@@ -6164,9 +6165,19 @@ aside {
 pre {
   margin: 75px -100px; }
 
+@media only screen and (max-width: 1300px) {
+  .tile {
+    height: 775px; }
+
+  .tile .excerpt {
+    font-size: 18px;
+    line-height: 30px; } }
 @media only screen and (max-width: 991px) {
   .container {
     width: auto; }
+
+  .tile {
+    height: auto; }
 
   pre {
     margin-left: 0;
@@ -6175,11 +6186,13 @@ pre {
   .container {
     width: auto; }
 
-  .tile .featurette, .topper {
-    height: 300px; }
+  .tile {
+    height: auto; }
 
-  h1.special,
-  .tile h2 {
+  .tile .featurette, .topper {
+    height: 200px; }
+
+  h1.special {
     font-size: 40px;
     line-height: 44px; }
 

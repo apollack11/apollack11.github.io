@@ -1,7 +1,7 @@
 ---
 layout: inner
 title: 'Baxter Pick and Place'
-date: 2016-12-20 13:26:34
+date: 2016-12-21 13:26:34
 categories: ROS python baxter git
 tags: robotics
 video_format: youtube

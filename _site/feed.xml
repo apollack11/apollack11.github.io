@@ -5,8 +5,8 @@
     <description></description>
     <link>https://apollack11.github.io/</link>
     <atom:link href="https://apollack11.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Mar 2017 11:30:00 -0500</pubDate>
-    <lastBuildDate>Wed, 29 Mar 2017 11:30:00 -0500</lastBuildDate>
+    <pubDate>Wed, 29 Mar 2017 11:36:34 -0500</pubDate>
+    <lastBuildDate>Wed, 29 Mar 2017 11:36:34 -0500</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -87,7 +87,7 @@
 &lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;br /&gt;
 [1] Shi, Jianbo, and Tomasi. “Good Features To Track.” Proceedings of IEEE Conference on Computer Vision and Pattern Recognition CVPR-94 (1994): n. pag. Web.&lt;br /&gt;
 [2] Wu, Ying. “Differential Motion Analysis (I)”. EECS432 Lecture 5. Tech Room L170, Evanston, IL. 24 Jan. 2017. Lecture.&lt;br /&gt;
-[3] Moran, Antonio, Ph.D. &lt;em&gt;Sensor Data Fusion Using Kalman Filters.&lt;/em&gt; IEEE, 24 May 2013. Web. &lt;a href=&quot;https://www.slideshare.net/antoniomorancardenas/data-fusion-with-kalman-filtering&quot;&gt;https://www.slideshare.net/antoniomorancardenas/data-fusion-with-kalman-filtering&lt;/a&gt;.&lt;/p&gt;
+[3] Moran, Antonio, Ph.D. &lt;em&gt;Sensor Data Fusion Using Kalman Filters.&lt;/em&gt; IEEE, 24 May 2013. Web. &amp;lt;&lt;a href=&quot;https://www.slideshare.net/antoniomorancardenas/data-fusion-with-kalman-filtering&quot;&gt;URL&lt;/a&gt;&amp;gt;.&lt;/p&gt;
 </description>
         <pubDate>Wed, 29 Mar 2017 05:29:00 -0500</pubDate>
         <link>https://apollack11.github.io/advanced-computer-vision.html</link>
@@ -186,6 +186,31 @@ Implemented a Support Vector Machine (SVM) through Scikit Learn which was traine
       </item>
     
       <item>
+        <title>Baxter Pick and Place</title>
+        <description>&lt;p&gt;Worked with a team to program a Baxter robot to play the Shell Game using the Robot Operating System.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/BlakeStrebel/shell_game&quot;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;More info coming soon!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 21 Dec 2016 07:26:34 -0600</pubDate>
+        <link>https://apollack11.github.io/baxter-pick-and-place.html</link>
+        <guid isPermaLink="true">https://apollack11.github.io/baxter-pick-and-place.html</guid>
+        
+        <category>robotics</category>
+        
+        
+        <category>ROS</category>
+        
+        <category>python</category>
+        
+        <category>baxter</category>
+        
+        <category>git</category>
+        
+      </item>
+    
+      <item>
         <title>Hockey Simulation</title>
         <description>&lt;p&gt;Mathematica simulation of a hockey puck hitting the crossbar of a goal.&lt;/p&gt;
 
@@ -207,7 +232,7 @@ Implemented a Support Vector Machine (SVM) through Scikit Learn which was traine
 chosen to create a tangential velocity of 100mph (44.704m/s) at the end of the stick when it
 contacts the puck.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 21 Dec 2016 04:46:00 -0600</pubDate>
+        <pubDate>Tue, 20 Dec 2016 04:46:00 -0600</pubDate>
         <link>https://apollack11.github.io/hockey-simulation.html</link>
         <guid isPermaLink="true">https://apollack11.github.io/hockey-simulation.html</guid>
         
@@ -217,31 +242,6 @@ contacts the puck.&lt;/p&gt;
         <category>mathematica</category>
         
         <category>Euler-Lagrange</category>
-        
-      </item>
-    
-      <item>
-        <title>Baxter Pick and Place</title>
-        <description>&lt;p&gt;Worked with a team to program a Baxter robot to play the Shell Game using the Robot Operating System.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/BlakeStrebel/shell_game&quot;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;More info coming soon!&lt;/p&gt;
-</description>
-        <pubDate>Tue, 20 Dec 2016 07:26:34 -0600</pubDate>
-        <link>https://apollack11.github.io/baxter-pick-and-place.html</link>
-        <guid isPermaLink="true">https://apollack11.github.io/baxter-pick-and-place.html</guid>
-        
-        <category>robotics</category>
-        
-        
-        <category>ROS</category>
-        
-        <category>python</category>
-        
-        <category>baxter</category>
-        
-        <category>git</category>
         
       </item>
     

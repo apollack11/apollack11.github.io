@@ -82,4 +82,4 @@ Our original goal was to filter noisy IMU data using optical flow, and we believ
 **References**  
 [1] Shi, Jianbo, and Tomasi. "Good Features To Track." Proceedings of IEEE Conference on Computer Vision and Pattern Recognition CVPR-94 (1994): n. pag. Web.  
 [2] Wu, Ying. “Differential Motion Analysis (I)”. EECS432 Lecture 5. Tech Room L170, Evanston, IL. 24 Jan. 2017. Lecture.  
-[3] Moran, Antonio, Ph.D. _Sensor Data Fusion Using Kalman Filters._ IEEE, 24 May 2013. Web. <https://www.slideshare.net/antoniomorancardenas/data-fusion-with-kalman-filtering>.
+[3] Moran, Antonio, Ph.D. _Sensor Data Fusion Using Kalman Filters._ IEEE, 24 May 2013. Web. <[URL](https://www.slideshare.net/antoniomorancardenas/data-fusion-with-kalman-filtering)>.

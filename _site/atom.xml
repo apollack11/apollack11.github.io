@@ -4,7 +4,7 @@
  <title>Adam Pollack</title>
  <link href="https://apollack11.github.io/atom.xml" rel="self"/>
  <link href="https://apollack11.github.io/"/>
- <updated>2017-03-29T11:30:00-05:00</updated>
+ <updated>2017-03-29T11:36:34-05:00</updated>
  <id>https://apollack11.github.io</id>
  <author>
    <name>Adam Pollack</name>
@@ -93,7 +93,7 @@
 &lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;br /&gt;
 [1] Shi, Jianbo, and Tomasi. “Good Features To Track.” Proceedings of IEEE Conference on Computer Vision and Pattern Recognition CVPR-94 (1994): n. pag. Web.&lt;br /&gt;
 [2] Wu, Ying. “Differential Motion Analysis (I)”. EECS432 Lecture 5. Tech Room L170, Evanston, IL. 24 Jan. 2017. Lecture.&lt;br /&gt;
-[3] Moran, Antonio, Ph.D. &lt;em&gt;Sensor Data Fusion Using Kalman Filters.&lt;/em&gt; IEEE, 24 May 2013. Web. &lt;a href=&quot;https://www.slideshare.net/antoniomorancardenas/data-fusion-with-kalman-filtering&quot;&gt;https://www.slideshare.net/antoniomorancardenas/data-fusion-with-kalman-filtering&lt;/a&gt;.&lt;/p&gt;
+[3] Moran, Antonio, Ph.D. &lt;em&gt;Sensor Data Fusion Using Kalman Filters.&lt;/em&gt; IEEE, 24 May 2013. Web. &amp;lt;&lt;a href=&quot;https://www.slideshare.net/antoniomorancardenas/data-fusion-with-kalman-filtering&quot;&gt;URL&lt;/a&gt;&amp;gt;.&lt;/p&gt;
 </content>
  </entry>
  
@@ -165,9 +165,22 @@ Implemented a Support Vector Machine (SVM) through Scikit Learn which was traine
  </entry>
  
  <entry>
+   <title>Baxter Pick and Place</title>
+   <link href="https://apollack11.github.io/baxter-pick-and-place.html"/>
+   <updated>2016-12-21T07:26:34-06:00</updated>
+   <id>https://apollack11.github.io/baxter-pick-and-place</id>
+   <content type="html">&lt;p&gt;Worked with a team to program a Baxter robot to play the Shell Game using the Robot Operating System.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/BlakeStrebel/shell_game&quot;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;More info coming soon!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Hockey Simulation</title>
    <link href="https://apollack11.github.io/hockey-simulation.html"/>
-   <updated>2016-12-21T04:46:00-06:00</updated>
+   <updated>2016-12-20T04:46:00-06:00</updated>
    <id>https://apollack11.github.io/hockey-simulation</id>
    <content type="html">&lt;p&gt;Mathematica simulation of a hockey puck hitting the crossbar of a goal.&lt;/p&gt;
 
@@ -188,19 +201,6 @@ Implemented a Support Vector Machine (SVM) through Scikit Learn which was traine
 &lt;p&gt;The hockey stick has a constant force applied of 243.5N. This force was
 chosen to create a tangential velocity of 100mph (44.704m/s) at the end of the stick when it
 contacts the puck.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Baxter Pick and Place</title>
-   <link href="https://apollack11.github.io/baxter-pick-and-place.html"/>
-   <updated>2016-12-20T07:26:34-06:00</updated>
-   <id>https://apollack11.github.io/baxter-pick-and-place</id>
-   <content type="html">&lt;p&gt;Worked with a team to program a Baxter robot to play the Shell Game using the Robot Operating System.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/BlakeStrebel/shell_game&quot;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;More info coming soon!&lt;/p&gt;
 </content>
  </entry>
  

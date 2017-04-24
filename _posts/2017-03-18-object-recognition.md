@@ -5,6 +5,7 @@ date: 2017-03-18 03:30:00
 categories: Python ScikitLearn Tensorflow
 tags: Machine Learning
 featured_image: '/assets/object_recognition.gif'
+featured_image_alternate: '/assets/hand_points.jpg'
 lead_text: 'Winter Project for Northwestern MSR Program'
 ---
 

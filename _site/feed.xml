@@ -5,8 +5,8 @@
     <description></description>
     <link>https://apollack11.github.io/</link>
     <atom:link href="https://apollack11.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Mar 2017 14:43:38 -0500</pubDate>
-    <lastBuildDate>Wed, 29 Mar 2017 14:43:38 -0500</lastBuildDate>
+    <pubDate>Mon, 24 Apr 2017 17:43:28 -0500</pubDate>
+    <lastBuildDate>Mon, 24 Apr 2017 17:43:28 -0500</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -103,6 +103,8 @@
         <category>C++</category>
         
         <category>OpenCV</category>
+        
+        <category>ROS</category>
         
       </item>
     
@@ -205,8 +207,6 @@ Implemented a Support Vector Machine (SVM) through Scikit Learn which was traine
         <category>python</category>
         
         <category>baxter</category>
-        
-        <category>git</category>
         
       </item>
     

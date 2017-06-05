@@ -86,12 +86,12 @@ After determining the best set of hyperparameters based on average peak validati
 
 <div style="text-align: center;">
   <img src="/assets/final_model_accuracy.png" alt="Final Model Accuracy Graph" style="width: 80%; max-width: 650px; padding: 10px"/>
-  <p>Figure 3: Tensorboard Graph of Accuracy for Final Model at 500 epochs</p>
+  <p>Figure 3: Tensorboard Graph of Accuracy for Final Model at 500 epochs (Orange Line = Training Dataset, Blue Line = Validation Dataset)</p>
 </div>
 
 <div style="text-align: center;">
   <img src="/assets/final_model_loss.png" alt="Final Model Accuracy Graph" style="width: 80%; max-width: 650px; padding: 10px"/>
-  <p>Figure 4: Tensorboard Graph of Loss for Final Model at 500 epochs</p>
+  <p>Figure 4: Tensorboard Graph of Loss for Final Model at 500 epochs (Orange Line = Training Dataset, Blue Line = Validation Dataset)</p>
 </div>
 
 ### Conclusion  
@@ -137,7 +137,7 @@ Our model classified more examples as negative when they should have been positi
 We plan to test our model on entire scans of a lung by extracting 40x40 images from each image slice of the lung. Sliding a window with a stride of around 20 would give us a large set of images to test for cancer but with a pre-trained model, this would be relatively easy to do. Our hope is that this method would allow us to determine whether or not cancer is present in an entire lung instead of a predetermined section. We would also like to try implementing one or more named convolutional neural networks such as the AlexNet<sup>[2]</sup> or Inception<sup>[3]</sup>.
 
 ### Final Report  
-If you are intersted in learning more about the details of this project, please read our [report](https://apollack11.github.io/EECS349_Report.pdf)  
+If you are intersted in learning more about the details of this project, please read our [report](https://apollack11.github.io/EECS349_Report.pdf).  
 
 ### References  
 [1] Stanford Course Notes on CNNs: <http://cs231n.github.io/convolutional-networks/>  

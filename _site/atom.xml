@@ -4,7 +4,7 @@
  <title>Adam Pollack</title>
  <link href="https://apollack11.github.io/atom.xml" rel="self"/>
  <link href="https://apollack11.github.io/"/>
- <updated>2017-06-04T20:57:28-05:00</updated>
+ <updated>2017-06-04T21:10:21-05:00</updated>
  <id>https://apollack11.github.io</id>
  <author>
    <name>Adam Pollack</name>
@@ -95,12 +95,12 @@
 
 &lt;div style=&quot;text-align: center;&quot;&gt;
   &lt;img src=&quot;/assets/final_model_accuracy.png&quot; alt=&quot;Final Model Accuracy Graph&quot; style=&quot;width: 80%; max-width: 650px; padding: 10px&quot; /&gt;
-  &lt;p&gt;Figure 3: Tensorboard Graph of Accuracy for Final Model at 500 epochs&lt;/p&gt;
+  &lt;p&gt;Figure 3: Tensorboard Graph of Accuracy for Final Model at 500 epochs (Orange Line = Training Dataset, Blue Line = Validation Dataset)&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;text-align: center;&quot;&gt;
   &lt;img src=&quot;/assets/final_model_loss.png&quot; alt=&quot;Final Model Accuracy Graph&quot; style=&quot;width: 80%; max-width: 650px; padding: 10px&quot; /&gt;
-  &lt;p&gt;Figure 4: Tensorboard Graph of Loss for Final Model at 500 epochs&lt;/p&gt;
+  &lt;p&gt;Figure 4: Tensorboard Graph of Loss for Final Model at 500 epochs (Orange Line = Training Dataset, Blue Line = Validation Dataset)&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
@@ -146,7 +146,7 @@
 &lt;p&gt;We plan to test our model on entire scans of a lung by extracting 40x40 images from each image slice of the lung. Sliding a window with a stride of around 20 would give us a large set of images to test for cancer but with a pre-trained model, this would be relatively easy to do. Our hope is that this method would allow us to determine whether or not cancer is present in an entire lung instead of a predetermined section. We would also like to try implementing one or more named convolutional neural networks such as the AlexNet&lt;sup&gt;[2]&lt;/sup&gt; or Inception&lt;sup&gt;[3]&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;final-report&quot;&gt;Final Report&lt;/h3&gt;
-&lt;p&gt;If you are intersted in learning more about the details of this project, please read our &lt;a href=&quot;https://apollack11.github.io/EECS349_Report.pdf&quot;&gt;report&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you are intersted in learning more about the details of this project, please read our &lt;a href=&quot;https://apollack11.github.io/EECS349_Report.pdf&quot;&gt;report&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
 &lt;p&gt;[1] Stanford Course Notes on CNNs: &lt;a href=&quot;http://cs231n.github.io/convolutional-networks/&quot;&gt;http://cs231n.github.io/convolutional-networks/&lt;/a&gt;&lt;br /&gt;

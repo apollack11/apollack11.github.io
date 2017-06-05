@@ -39,7 +39,7 @@ Implemented a Support Vector Machine (SVM) through Scikit Learn which was traine
 #### Baxter Implementation  
 After completing a working version of a three object classifier, I began work on enabling Baxter to recognize and pick up objects from the table in front of him. To interface with Baxter, I used the Robot Operating System (ROS) in multiple python scripts. One node activates the camera in Baxter's hand, performs object recognition on each of the three sections of the image, and publishes the location and name of each object as a message. Then a second node sends a desired object message which is read by a third node which moves Baxter's arm to the location of the object and picks it up. For more specifics of this system, please look at the [README](https://github.com/apollack11/object-recognition) for the repo.
 
-#### Results  
+### Results  
 The results of training on the Final Dataset are shown in the video above.
 
 Final Dataset  
@@ -54,12 +54,12 @@ Final Dataset
 Relevant GitHub Repo:
 [learning-tensorflow](https://github.com/apollack11/learning-tensorflow)
 
-I also started looking into object recognition through Tensorflow. I started by completing the tutorials on Tensorflow found [here](https://www.tensorflow.org/tutorials/deep_cnn). One of the tutorials focused on recognizing handwritten digits using data from the MNIST dataset. This problem used a convolutional neural network to train a classifier to recognize handwritten digits. I extended the original solution to save the variables that defined the convolutional neural network so the model could be trained and then used to predict based on individual images. I was able to draw handwritten digits in GIMP and predict the number in the image based on the network. <!-- Below is an example image with prediction. -->   -->
+I also started looking into object recognition through Tensorflow. I started by completing the tutorials on Tensorflow found [here](https://www.tensorflow.org/tutorials/deep_cnn). One of the tutorials focused on recognizing handwritten digits using data from the MNIST dataset. This problem used a convolutional neural network to train a classifier to recognize handwritten digits. I extended the original solution to save the variables that defined the convolutional neural network so the model could be trained and then used to predict based on individual images. I was able to draw handwritten digits in GIMP and predict the number in the image based on the network. <!-- Below is an example image with prediction. -->
 
 ### Future Work  
 I would like to take the knowledge I learned while working on my final project for EECS349 Machine Learning and train a CNN on the ImageNet dataset for three different objects. I believe this would greatly improve the robustness of the system.
 
 
 **References**  
-[1] Kitani, Kris. "Bag-of-Visual-Words." _Carnegie Mellon University_. Web. <http://www.cs.cmu.edu/~16385/lectures/Lecture12.pdf>.
+[1] Kitani, Kris. "Bag-of-Visual-Words." _Carnegie Mellon University_. Web. <http://www.cs.cmu.edu/~16385/lectures/Lecture12.pdf>.  
 [2] Lowe, David G. "Object Recognition from Local Scale-Invariant Features." _Proceedings of the Seventh IEEE International Conference on Computer Vision_ (1999): n. pag. Web.

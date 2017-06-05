@@ -4,13 +4,156 @@
  <title>Adam Pollack</title>
  <link href="https://apollack11.github.io/atom.xml" rel="self"/>
  <link href="https://apollack11.github.io/"/>
- <updated>2017-04-24T17:43:28-05:00</updated>
+ <updated>2017-06-04T20:57:28-05:00</updated>
  <id>https://apollack11.github.io</id>
  <author>
    <name>Adam Pollack</name>
    <email>apollack11@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Predicting the Presence of Lung Cancer using a CNN</title>
+   <link href="https://apollack11.github.io/machine-learning.html"/>
+   <updated>2017-06-04T11:30:00-05:00</updated>
+   <id>https://apollack11.github.io/machine-learning</id>
+   <content type="html">&lt;p&gt;Exploring the parameters of convolutional neural networks to create an accurate image classifier.&lt;/p&gt;
+
+&lt;p&gt;Final GitHub Repo: &lt;a href=&quot;https://github.com/njkaiser/EECS349_Project&quot;&gt;EECS349_Project&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Contributors: Adam Pollack, Chainatee Tanakulrungson, Nate Kaiser&lt;/p&gt;
+
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+&lt;p&gt;The objective of this project was to predict the presence of lung cancer given a 40×40 pixel image snippet extracted from the &lt;a href=&quot;https://luna16.grand-challenge.org/data/&quot;&gt;LUNA2016 medical image database&lt;/a&gt;. This problem is unique and exciting in that it has impactful and direct implications for the future of healthcare, machine learning applications in personal data and decisions, and computer vision in general. The medical field is a likely place for machine learning to thrive, as medical regulations continue to allow increased sharing of anonymized data for the sake of better care. Not only that, but the field is still new enough that our project implements methods at the forefront of technology.&lt;/p&gt;
+
+&lt;h3 id=&quot;approach&quot;&gt;Approach&lt;/h3&gt;
+&lt;p&gt;Due to the complex nature of our task, most machine learning algorithms are not well-posed for this project. There are currently two prominent approaches for machine learning image data: either extract features using conventional computer vision techniques and learn the feature sets, or apply convolution directly using a CNN. In the past few years, however, CNNs have far outpaced traditional computer vision methods for difficult, enigmatic tasks such as cancer detection. We decided to implement a CNN in TensorFlow, Google’s machine learning framework.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/cancerous_images.png&quot; alt=&quot;Cancerous Images&quot; style=&quot;width: 80%; max-width: 650px; padding: 10px&quot; /&gt;
+  &lt;p&gt;Figure 1: Examples of &lt;i&gt;cancerous&lt;/i&gt; images&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/non_cancerous_images.png&quot; alt=&quot;Non-cancerous Images&quot; style=&quot;width: 80%; max-width: 650px; padding: 10px&quot; /&gt;
+  &lt;p&gt;Figure 2: Examples of &lt;i&gt;non-cancerous&lt;/i&gt; images&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Because we collectively had limited experience with convolutional neural networks, we decided to first explore the hyperparameters of a CNN. We did so by creating a 108-dimensional experiment in which we varied the kernel size and number of filters of each convolutional layer and the dropout rate. For this study, we kept a constant network architecture.&lt;/p&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;panel panel-default&quot;&gt;
+    &lt;div class=&quot;panel-heading&quot; style=&quot;text-align: center&quot;&gt;
+      &lt;b&gt;Hyperparameter Permutations&lt;/b&gt;
+    &lt;/div&gt;
+    &lt;table class=&quot;table table-bordered&quot;&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Attribute&lt;/th&gt;
+          &lt;th&gt;Values Tested&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr style=&quot;text-align: left&quot;&gt;
+          &lt;td&gt;Kernel Size (Conv Layer 1)&lt;/td&gt;
+          &lt;td&gt;3x3, 5x5, 7x7&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr style=&quot;text-align: left&quot;&gt;
+          &lt;td&gt;Kernel Size (Conv Layer 2)&lt;/td&gt;
+          &lt;td&gt;3x3, 5x5, 7x7&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr style=&quot;text-align: left&quot;&gt;
+          &lt;td&gt;Number of Filters (Conv Layer 1)&lt;/td&gt;
+          &lt;td&gt;16, 32&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr style=&quot;text-align: left&quot;&gt;
+          &lt;td&gt;Number of Filters (Conv Layer 2)&lt;/td&gt;
+          &lt;td&gt;32, 64&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr style=&quot;text-align: left&quot;&gt;
+          &lt;td&gt;Dropout Rate&lt;/td&gt;
+          &lt;td&gt;0.1, 0.2, 0.3&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Each model was trained on 2,064 images (batch size of 104), validation was run every 10 epochs on another 442 images, and a final test was run after 500 epochs on another 442 images.&lt;/p&gt;
+
+&lt;h3 id=&quot;results&quot;&gt;Results&lt;/h3&gt;
+&lt;p&gt;After determining the best set of hyperparameters based on average peak validation accuracy, we then tested six new architectures based on these hyperparameters. The structure of each of these architectures was decided based on the principles described in the Stanford CS231n course notes&lt;sup&gt;[1]&lt;/sup&gt;. After running the final six architectures at 500 epochs, we found the inflection point of the loss to be around 250 epochs. We then ran each of the six architectures for 250 epochs and recorded the final test accuracy. The best network architecture of these six achieved a test accuracy of 96.38%.&lt;/p&gt;
+
+&lt;div class=&quot;panel panel-default&quot;&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;
+    &lt;b class=&quot;panel-title&quot;&gt;Final Network Architecture&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+    Input &amp;rarr; [Conv Layer 1 &amp;rarr; ReLU] &amp;rarr; Max Pool Layer 1 &amp;rarr; [Conv Layer 2 &amp;rarr; ReLU] &amp;rarr; Max Pool Layer 2 &amp;rarr; [Conv Layer 3 &amp;rarr; ReLU] &amp;rarr; Max Pool Layer 3 &amp;rarr; [Fully-Connected Layer 1 &amp;rarr; Dropout] &amp;rarr; Fully-Connected Layer 2 &amp;rarr; Output Classes [0 or 1]
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/final_model_accuracy.png&quot; alt=&quot;Final Model Accuracy Graph&quot; style=&quot;width: 80%; max-width: 650px; padding: 10px&quot; /&gt;
+  &lt;p&gt;Figure 3: Tensorboard Graph of Accuracy for Final Model at 500 epochs&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/final_model_loss.png&quot; alt=&quot;Final Model Accuracy Graph&quot; style=&quot;width: 80%; max-width: 650px; padding: 10px&quot; /&gt;
+  &lt;p&gt;Figure 4: Tensorboard Graph of Loss for Final Model at 500 epochs&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;After finding our best model, we ran further analysis to extract a confusion matrix and misclassified images of the final test results to determine why this number was not closer to 100%.&lt;/p&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;panel panel-default&quot;&gt;
+    &lt;div class=&quot;panel-heading&quot; style=&quot;text-align: center&quot;&gt;
+      &lt;b&gt;Confusion Matrix&lt;/b&gt;
+    &lt;/div&gt;
+    &lt;table class=&quot;table table-bordered&quot;&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;Predicted +&lt;/th&gt;
+          &lt;th&gt;Predicted -&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr style=&quot;text-align: left&quot;&gt;
+          &lt;td&gt;&lt;b&gt;Actual +&lt;/b&gt;&lt;/td&gt;
+          &lt;td&gt;226&lt;/td&gt;
+          &lt;td&gt;12&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr style=&quot;text-align: left&quot;&gt;
+          &lt;td&gt;&lt;b&gt;Actual -&lt;/b&gt;&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;200&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/misclassified_images.png&quot; alt=&quot;Misclassified Images&quot; style=&quot;width: 80%; max-width: 650px; padding: 10px&quot; /&gt;
+  &lt;p&gt;Figure 5: Examples of misclassified images from the test dataset&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Our model classified more examples as negative when they should have been positive than vice versa. We believe this is because of the nature of some of the positive examples. For example, the first four misclassified images above are all positive examples of cancer even though two of them have almost no distinct features. It is likely that it would be just as difficult for a human to classify those images as a doctor. We also can’t guarantee that the data we used is completely correctly classified; it is possible there are some mislabeled images.&lt;/p&gt;
+
+&lt;h3 id=&quot;future-work&quot;&gt;Future Work&lt;/h3&gt;
+&lt;p&gt;We plan to test our model on entire scans of a lung by extracting 40x40 images from each image slice of the lung. Sliding a window with a stride of around 20 would give us a large set of images to test for cancer but with a pre-trained model, this would be relatively easy to do. Our hope is that this method would allow us to determine whether or not cancer is present in an entire lung instead of a predetermined section. We would also like to try implementing one or more named convolutional neural networks such as the AlexNet&lt;sup&gt;[2]&lt;/sup&gt; or Inception&lt;sup&gt;[3]&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-report&quot;&gt;Final Report&lt;/h3&gt;
+&lt;p&gt;If you are intersted in learning more about the details of this project, please read our &lt;a href=&quot;https://apollack11.github.io/EECS349_Report.pdf&quot;&gt;report&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+&lt;p&gt;[1] Stanford Course Notes on CNNs: &lt;a href=&quot;http://cs231n.github.io/convolutional-networks/&quot;&gt;http://cs231n.github.io/convolutional-networks/&lt;/a&gt;&lt;br /&gt;
+[2] AlexNet: &lt;a href=&quot;http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks&quot;&gt;http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks&lt;/a&gt;&lt;br /&gt;
+[3] Inception (by Google): &lt;a href=&quot;https://arxiv.org/abs/1409.4842&quot;&gt;https://arxiv.org/abs/1409.4842&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Estimating Odometry Using Optical Flow</title>

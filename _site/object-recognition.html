@@ -9,7 +9,7 @@
     <!-- Meta -->
     <meta charset="utf-8">
 
-    <title>Exploring Methods for Object Recognition</title>
+    <title>Object Recognition with Baxter</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -118,9 +118,12 @@
     
     <div class="topper">
         
-          <span class="img" style="background-image: url('https://apollack11.github.io/assets/hand_points.jpg');"></span>
-        
 
+        
+          
+          
+            <iframe src="https://player.vimeo.com/video/218413450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          
         
     </div>
 
@@ -129,7 +132,7 @@
     <h1 class="special">
         <span>
         
-            Exploring Methods for Object Recognition
+            Object Recognition with Baxter
         
         </span>
     </h1>
@@ -153,11 +156,11 @@
         
             &middot;
             
-                <span>Python</span>
+                <span>python</span>
             
-                <span>ScikitLearn</span>
+                <span>scitkit-learn</span>
             
-                <span>Tensorflow</span>
+                <span>tensorflow</span>
             
         
     </aside>
@@ -176,15 +179,18 @@
                 <div class="col-md-10 col-md-offset-1">
                     <p>Implementation of the Bag of Words method for object recognition.</p>
 
+<!-- featured_image: '/assets/object_recognition.gif'
+featured_image_alternate: '/assets/hand_points.jpg' -->
+
 <p>Final GitHub Repo: <a href="https://github.com/apollack11/object-recognition">object-recognition</a></p>
 
 <h3 id="the-goal">The Goal</h3>
-<p>I hadn’t gotten a chance to explore machine learning yet at Northwestern, so I decided to center my winter project around the topic. Exploring object recognition seemed like a straightforward yet interesting way to do so. I set out to learn the basics of machine learning and to create a fully-functioning object classifier.</p>
+<p>I hadn’t gotten a chance to explore machine learning yet at Northwestern, so I decided to center my winter project around the topic. Exploring object recognition seemed like a straightforward yet interesting way to do so. I set out to learn the basics of machine learning and to create a fully-functioning object classifier which could be used on the Baxter robot in our lab to locate and pick up objects.</p>
 
 <h3 id="methodology">Methodology</h3>
 
 <h4 id="bag-of-words">Bag of Words</h4>
-<p>The gif above this post shows the results of a trained classifier using the bag of words method. Bag of words is a four step process which consists of the following<sup>[1]</sup>:</p>
+<p>The video above this post shows the results of a trained classifier using the bag of words method. Bag of words is a four step process which consists of the following<sup>[1]</sup>:</p>
 
 <p><strong>STEP 1:</strong> Extract Features<br />
 This step aims to simplify images into a set of smaller features so the classifier doesn’t need to train on every pixel of every image. These features should be unique and should not depend on orientation or scaling. For this step I used the scale-invariant feature transform (SIFT) algorithm implemented through OpenCV. SIFT features are invariant to orientation and uniform scaling and are partially invariant to illumination changes and affine distortion<sup>[2]</sup>. Due to their robustness, SIFT features seemed ideal for a project which will be demonstrated in a variety of locations with varying lighting conditions and cameras.</p>
@@ -199,23 +205,23 @@ Created a histogram of all the features</p>
 Implemented a Support Vector Machine (SVM) through Scikit Learn which was trained on the extracted features.</p>
 
 <h4 id="results">Results</h4>
-<p>The results of training on Dataset #2 are shown in the gif above. The details surrounding each dataset are below.</p>
+<p>The results of training on the Final Dataset are shown in the video above.</p>
 
-<p>Dataset #1
-    - Contains images taken from phone of soda can and screwdriver
-    - Training set
-        - 51 images of soda can, 35 of screwdriver
-    - Test set
-        - 5 images of each
-    - Accuracy: 0.859375 —&gt; 85.94%</p>
-
-<p>Dataset #2
-    - Contains images taken from webcam of soda can and screwdriver
-    - Training set
-        - 193 images of each (85.78% of data)
-    - Test set
-        - 32 images of each (14.22% of data)
-    - Accuracy: 0.953125 —&gt; 95.31%</p>
+<p>Final Dataset</p>
+<ul>
+  <li>Contains images taken from Baxter’s hand camera of an eraser, marker, and screwdriver</li>
+  <li>Training set
+    <ul>
+      <li>171 images of each (85.07% of data)</li>
+    </ul>
+  </li>
+  <li>Test set
+    <ul>
+      <li>30 images of each (14.93% of data)</li>
+    </ul>
+  </li>
+  <li>Accuracy: 0.96667 → 96.67%</li>
+</ul>
 
 <h4 id="tensorflow">Tensorflow</h4>
 <p>Relevant GitHub Repo:
@@ -224,11 +230,7 @@ Implemented a Support Vector Machine (SVM) through Scikit Learn which was traine
 <p>I also started looking into object recognition through Tensorflow. I started by completing the tutorials on Tensorflow found <a href="https://www.tensorflow.org/tutorials/deep_cnn">here</a>. One of the tutorials focused on recognizing handwritten digits using data from the MNIST dataset. This problem used a convolutional neural network to train a classifier to recognize handwritten digits. I extended the original solution to save the variables that defined the convolutional neural network so the model could be trained and then used to predict based on individual images. I was able to draw handwritten digits in GIMP and predict the number in the image based on the network. <!-- Below is an example image with prediction. --></p>
 
 <h3 id="future-work">Future Work</h3>
-<ul>
-  <li>Write custom SVM to train object recognition</li>
-  <li>Improve robustness by collecting a wider variety of images</li>
-  <li>Implement object recognition with the Baxter robot in our lab</li>
-</ul>
+<p>I would like to take the knowledge I learned while working on my final project for EECS349 Machine Learning and train a CNN on the ImageNet dataset for three different objects. I believe this would greatly improve the robustness of the system.</p>
 
 <p><strong>References</strong><br />
 [1] Kitani, Kris. “Bag-of-Visual-Words.” <em>Carnegie Mellon University</em>. Web. <a href="http://www.cs.cmu.edu/~16385/lectures/Lecture12.pdf">http://www.cs.cmu.edu/~16385/lectures/Lecture12.pdf</a>.

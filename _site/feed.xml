@@ -5,8 +5,8 @@
     <description></description>
     <link>https://apollack11.github.io/</link>
     <atom:link href="https://apollack11.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 04 Jun 2017 21:27:28 -0500</pubDate>
-    <lastBuildDate>Sun, 04 Jun 2017 21:27:28 -0500</lastBuildDate>
+    <pubDate>Sun, 04 Jun 2017 21:56:52 -0500</pubDate>
+    <lastBuildDate>Sun, 04 Jun 2017 21:56:52 -0500</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -261,18 +261,21 @@
       </item>
     
       <item>
-        <title>Exploring Methods for Object Recognition</title>
+        <title>Object Recognition with Baxter</title>
         <description>&lt;p&gt;Implementation of the Bag of Words method for object recognition.&lt;/p&gt;
+
+&lt;!-- featured_image: '/assets/object_recognition.gif'
+featured_image_alternate: '/assets/hand_points.jpg' --&gt;
 
 &lt;p&gt;Final GitHub Repo: &lt;a href=&quot;https://github.com/apollack11/object-recognition&quot;&gt;object-recognition&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;the-goal&quot;&gt;The Goal&lt;/h3&gt;
-&lt;p&gt;I hadn’t gotten a chance to explore machine learning yet at Northwestern, so I decided to center my winter project around the topic. Exploring object recognition seemed like a straightforward yet interesting way to do so. I set out to learn the basics of machine learning and to create a fully-functioning object classifier.&lt;/p&gt;
+&lt;p&gt;I hadn’t gotten a chance to explore machine learning yet at Northwestern, so I decided to center my winter project around the topic. Exploring object recognition seemed like a straightforward yet interesting way to do so. I set out to learn the basics of machine learning and to create a fully-functioning object classifier which could be used on the Baxter robot in our lab to locate and pick up objects.&lt;/p&gt;
 
 &lt;h3 id=&quot;methodology&quot;&gt;Methodology&lt;/h3&gt;
 
 &lt;h4 id=&quot;bag-of-words&quot;&gt;Bag of Words&lt;/h4&gt;
-&lt;p&gt;The gif above this post shows the results of a trained classifier using the bag of words method. Bag of words is a four step process which consists of the following&lt;sup&gt;[1]&lt;/sup&gt;:&lt;/p&gt;
+&lt;p&gt;The video above this post shows the results of a trained classifier using the bag of words method. Bag of words is a four step process which consists of the following&lt;sup&gt;[1]&lt;/sup&gt;:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;STEP 1:&lt;/strong&gt; Extract Features&lt;br /&gt;
 This step aims to simplify images into a set of smaller features so the classifier doesn’t need to train on every pixel of every image. These features should be unique and should not depend on orientation or scaling. For this step I used the scale-invariant feature transform (SIFT) algorithm implemented through OpenCV. SIFT features are invariant to orientation and uniform scaling and are partially invariant to illumination changes and affine distortion&lt;sup&gt;[2]&lt;/sup&gt;. Due to their robustness, SIFT features seemed ideal for a project which will be demonstrated in a variety of locations with varying lighting conditions and cameras.&lt;/p&gt;
@@ -287,23 +290,23 @@ Created a histogram of all the features&lt;/p&gt;
 Implemented a Support Vector Machine (SVM) through Scikit Learn which was trained on the extracted features.&lt;/p&gt;
 
 &lt;h4 id=&quot;results&quot;&gt;Results&lt;/h4&gt;
-&lt;p&gt;The results of training on Dataset #2 are shown in the gif above. The details surrounding each dataset are below.&lt;/p&gt;
+&lt;p&gt;The results of training on the Final Dataset are shown in the video above.&lt;/p&gt;
 
-&lt;p&gt;Dataset #1
-    - Contains images taken from phone of soda can and screwdriver
-    - Training set
-        - 51 images of soda can, 35 of screwdriver
-    - Test set
-        - 5 images of each
-    - Accuracy: 0.859375 —&amp;gt; 85.94%&lt;/p&gt;
-
-&lt;p&gt;Dataset #2
-    - Contains images taken from webcam of soda can and screwdriver
-    - Training set
-        - 193 images of each (85.78% of data)
-    - Test set
-        - 32 images of each (14.22% of data)
-    - Accuracy: 0.953125 —&amp;gt; 95.31%&lt;/p&gt;
+&lt;p&gt;Final Dataset&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Contains images taken from Baxter’s hand camera of an eraser, marker, and screwdriver&lt;/li&gt;
+  &lt;li&gt;Training set
+    &lt;ul&gt;
+      &lt;li&gt;171 images of each (85.07% of data)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Test set
+    &lt;ul&gt;
+      &lt;li&gt;30 images of each (14.93% of data)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Accuracy: 0.96667 → 96.67%&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;tensorflow&quot;&gt;Tensorflow&lt;/h4&gt;
 &lt;p&gt;Relevant GitHub Repo:
@@ -312,11 +315,7 @@ Implemented a Support Vector Machine (SVM) through Scikit Learn which was traine
 &lt;p&gt;I also started looking into object recognition through Tensorflow. I started by completing the tutorials on Tensorflow found &lt;a href=&quot;https://www.tensorflow.org/tutorials/deep_cnn&quot;&gt;here&lt;/a&gt;. One of the tutorials focused on recognizing handwritten digits using data from the MNIST dataset. This problem used a convolutional neural network to train a classifier to recognize handwritten digits. I extended the original solution to save the variables that defined the convolutional neural network so the model could be trained and then used to predict based on individual images. I was able to draw handwritten digits in GIMP and predict the number in the image based on the network. &lt;!-- Below is an example image with prediction. --&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;future-work&quot;&gt;Future Work&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Write custom SVM to train object recognition&lt;/li&gt;
-  &lt;li&gt;Improve robustness by collecting a wider variety of images&lt;/li&gt;
-  &lt;li&gt;Implement object recognition with the Baxter robot in our lab&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;I would like to take the knowledge I learned while working on my final project for EECS349 Machine Learning and train a CNN on the ImageNet dataset for three different objects. I believe this would greatly improve the robustness of the system.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;br /&gt;
 [1] Kitani, Kris. “Bag-of-Visual-Words.” &lt;em&gt;Carnegie Mellon University&lt;/em&gt;. Web. &lt;a href=&quot;http://www.cs.cmu.edu/~16385/lectures/Lecture12.pdf&quot;&gt;http://www.cs.cmu.edu/~16385/lectures/Lecture12.pdf&lt;/a&gt;.
@@ -326,16 +325,14 @@ Implemented a Support Vector Machine (SVM) through Scikit Learn which was traine
         <link>https://apollack11.github.io/object-recognition.html</link>
         <guid isPermaLink="true">https://apollack11.github.io/object-recognition.html</guid>
         
-        <category>Machine</category>
-        
-        <category>Learning</category>
+        <category>machine-learning</category>
         
         
-        <category>Python</category>
+        <category>python</category>
         
-        <category>ScikitLearn</category>
+        <category>scitkit-learn</category>
         
-        <category>Tensorflow</category>
+        <category>tensorflow</category>
         
       </item>
     

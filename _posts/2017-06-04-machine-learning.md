@@ -137,7 +137,8 @@ Our model classified more examples as negative when they should have been positi
 We plan to test our model on entire scans of a lung by extracting 40x40 images from each image slice of the lung. Sliding a window with a stride of around 20 would give us a large set of images to test for cancer but with a pre-trained model, this would be relatively easy to do. Our hope is that this method would allow us to determine whether or not cancer is present in an entire lung instead of a predetermined section. We would also like to try implementing one or more named convolutional neural networks such as AlexNet<sup>[[2]](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks)</sup> or Inception<sup>[[3]](https://arxiv.org/abs/1409.4842)</sup>.
 
 ### Final Report  
-If you are intersted in learning more about the details of this project, please read our [report](https://apollack11.github.io/EECS349_Report.pdf).  
+If you are intersted in learning more about the details of this project, please read our
+<a href="https://apollack11.github.io/EECS349_Report.pdf" target="_blank">report</a>.
 
 ### References  
 [1] Stanford Course Notes on CNNs: <http://cs231n.github.io/convolutional-networks/>  

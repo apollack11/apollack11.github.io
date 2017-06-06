@@ -1,6 +1,6 @@
 ---
 layout: inner
-title: 'Predicting the Presence of Lung Cancer using a CNN'
+title: 'Using a CNN to Predict the Presence of Lung Cancer'
 date: 2017-06-04 16:30:00
 categories: tensorflow python
 tags: machine-learning

@@ -8,7 +8,7 @@ featured_image: '/assets/vive_logo.png'
 lead_text: 'Final Project for MSR Program'
 ---
 
-Currently working on setting up localization using Vive Lighthouses and Vive Tracker
+Currently working on setting up localization using Vive Lighthouses and a Vive Tracker.
 
 ### Summary  
 The goal of this project is to implement a relatively cheap localization setup for a quadcopter using the HTC Vive. This project was proposed by Professor Michael Rubenstein and is intended to be an add-on to his course focused on the creation of a quadcopter from start to finish. The initial plan is to attach a Vive Tracker to one of the quadcopters and try and stabilize the vehicle's position in space.

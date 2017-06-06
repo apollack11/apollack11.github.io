@@ -4,7 +4,7 @@
  <title>Adam Pollack</title>
  <link href="https://apollack11.github.io/atom.xml" rel="self"/>
  <link href="https://apollack11.github.io/"/>
- <updated>2017-06-06T18:02:56-05:00</updated>
+ <updated>2017-06-06T18:13:28-05:00</updated>
  <id>https://apollack11.github.io</id>
  <author>
    <name>Adam Pollack</name>
@@ -17,7 +17,7 @@
    <link href="https://apollack11.github.io/quadcopter-localization.html"/>
    <updated>2017-06-04T11:30:00-05:00</updated>
    <id>https://apollack11.github.io/quadcopter-localization</id>
-   <content type="html">&lt;p&gt;Currently working on setting up localization using Vive Lighthouses and Vive Tracker&lt;/p&gt;
+   <content type="html">&lt;p&gt;Currently working on setting up localization using Vive Lighthouses and a Vive Tracker.&lt;/p&gt;
 
 &lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
 &lt;p&gt;The goal of this project is to implement a relatively cheap localization setup for a quadcopter using the HTC Vive. This project was proposed by Professor Michael Rubenstein and is intended to be an add-on to his course focused on the creation of a quadcopter from start to finish. The initial plan is to attach a Vive Tracker to one of the quadcopters and try and stabilize the vehicle’s position in space.&lt;/p&gt;

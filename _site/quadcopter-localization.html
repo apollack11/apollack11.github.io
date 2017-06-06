@@ -9,7 +9,7 @@
     <!-- Meta -->
     <meta charset="utf-8">
 
-    <title>Object Recognition with Baxter</title>
+    <title>Localizing a Quadcopter using the HTC Vive</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -118,12 +118,9 @@
     
     <div class="topper">
         
-
+          <span class="img" style="background-image: url('https://apollack11.github.io/assets/vive_logo.png');"></span>
         
-          
-          
-            <iframe src="https://player.vimeo.com/video/218413450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          
+
         
     </div>
 
@@ -132,7 +129,7 @@
     <h1 class="special">
         <span>
         
-            Object Recognition with Baxter
+            Localizing a Quadcopter using the HTC Vive
         
         </span>
     </h1>
@@ -152,13 +149,11 @@
     </div>
     
     <aside>
-        05.21.17
+        06.04.17
         
             &middot;
             
                 <span>python</span>
-            
-                <span>scitkit-learn</span>
             
                 <span>ros</span>
             
@@ -167,7 +162,7 @@
     
     <p class="lead">
         
-            Winter Project for Northwestern MSR Program
+            Final Project for MSR Program
         
     </p>
 </div>
@@ -177,67 +172,39 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <p>Implementation of the Bag of Words method for object recognition.</p>
+                    <p>Currently working on setting up localization using Vive Lighthouses and Vive Tracker</p>
 
-<!-- featured_image: '/assets/object_recognition.gif'
-featured_image_alternate: '/assets/hand_points.jpg' -->
+<h3 id="summary">Summary</h3>
+<p>The goal of this project is to implement a relatively cheap localization setup for a quadcopter using the HTC Vive. This project was proposed by Professor Michael Rubenstein and is intended to be an add-on to his course focused on the creation of a quadcopter from start to finish. The initial plan is to attach a Vive Tracker to one of the quadcopters and try and stabilize the vehicle’s position in space.</p>
 
-<p>Final GitHub Repo: <a href="https://github.com/apollack11/object-recognition">object-recognition</a></p>
+<h3 id="background">Background</h3>
+<p>The HTC Vive system consists of a main headset unit, two lighthouses, and two controllers. The lighthouses are the core element of this system because they track the other three components. Equipped with IR blasters, each lighthouse helps to locate the IR receivers on each of the Vive devices. Using these lighthouses, a system can be created to allow sub-millimeter localization.</p>
 
-<h3 id="the-goal">The Goal</h3>
-<p>I hadn’t gotten a chance to explore machine learning yet at Northwestern, so I decided to center my winter project around the topic. Exploring object recognition seemed like a straightforward yet interesting way to do so. I set out to learn the basics of machine learning and to create a fully-functioning object classifier which could be used on the Baxter robot in our lab to locate and pick up objects.</p>
+<h3 id="progress">Progress</h3>
+<p>Initial progress so far has been slow due to an initial lack of the required components for the system. The MSR program initially purchased an HTC Vive but our attempts to connect it to our existing computers were unsuccessful as they did not have the required graphics card for use with the Vive. Since discovering this problem, we have purchased a computer with a high-end GPU to run the Vive and it is now up and running. We have also purchased a Vive Tracker to attach to the quadcopter. With these components ready, I can now begin to extract the (x,y) location of the Vive Tracker in space.</p>
 
-<h3 id="methodology">Methodology</h3>
+<h3 id="related-work">Related Work</h3>
+<p>Once I have established localization of the quadcopter, I would like to be able to control its position in space and track trajectories based on its position. In preparation for this concept, I focused the efforts of my project in ME454: Optimal Control of Non-Linear Systems on controlling a 2D quadcopter. Below is a brief description and the results of this project.</p>
 
-<h4 id="bag-of-words">Bag of Words</h4>
-<p>The video above this post shows the results of a trained classifier using the bag of words method. Bag of words is a four step process which consists of the following<sup>[1]</sup>:</p>
+<h4 id="optimal-control-of-a-2d-quadcopter">Optimal Control of a 2D Quadcopter</h4>
 
-<p><strong>STEP 1:</strong> Extract Features<br />
-This step aims to simplify images into a set of smaller features so the classifier doesn’t need to train on every pixel of every image. These features should be unique and should not depend on orientation or scaling. For this step I used the scale-invariant feature transform (SIFT) algorithm implemented through OpenCV. SIFT features are invariant to orientation and uniform scaling and are partially invariant to illumination changes and affine distortion<sup>[2]</sup>. Due to their robustness, SIFT features seemed ideal for a project which will be demonstrated in a variety of locations with varying lighting conditions and cameras.</p>
+<p><strong>Description:</strong><br />
+This system consists of a rectangular object in two dimensions which has controllable forces at both ends. It can be pictured as a viewing a quadcopter from the side. It is under-actuated (2 controls, 3 degrees of freedom) and therefore I thought it would be a good problem for which to utilize optimal control.</p>
 
-<p><strong>STEP 2:</strong> Learn Visual Vocabulary<br />
-The next step is to learn visual vocabulary from the features extracted in Step 1. To do this, the features are put into clusters using unsupervised learning. Specifically, this step with use K-Means Clustering to determine features which are related to each other. I used K-Means Clustering from the Scikit Learn Python package to do this.</p>
+<p><strong>Dynamics:</strong><br />
+ddx = (1 / m) * [(F1 + F2) * Sin(theta[t])]<br />
+ddy = (1 / m) * [(F1 + F2) * Cos(theta[t]) – g]<br />
+ddtheta = (1 / rotInertia) * [F2 * length/2 – F1 * length/2]</p>
 
-<p><strong>STEP 3:</strong> Quantize Features using Visual Vocabulary<br />
-Created a histogram of all the features</p>
+<p>The dynamics of the system were straightforward and were determined by drawing a free body diagram of the quadcopter. The mass, the length, the height, and the rotational inertia of the quadcopter was determined by looking at the specs of a DJI Mavic quadcopter.</p>
 
-<p><strong>STEP 4:</strong> Train Classifier<br />
-Implemented a Support Vector Machine (SVM) through Scikit Learn which was trained on the extracted features.</p>
+<p><strong>Results:</strong></p>
+<div style="text-align: center;">
+  <img src="/assets/2d_quadcopter_control.gif" alt="2D Quadcopter Control" style="width: 80%; max-width: 650px; padding: 10px" />
+  <p>2D Quadcopter tracking the following trajectory: Travel to (1,2), draw a circle with a 1m radius, travel back to origin</p>
+</div>
 
-<h4 id="baxter-implementation">Baxter Implementation</h4>
-<p>After completing a working version of a three object classifier, I began work on enabling Baxter to recognize and pick up objects from the table in front of him. To interface with Baxter, I used the Robot Operating System (ROS) in multiple python scripts. One node activates the camera in Baxter’s hand, performs object recognition on each of the three sections of the image, and publishes the location and name of each object as a message. Then a second node sends a desired object message which is read by a third node which moves Baxter’s arm to the location of the object and picks it up. For more specifics of this system, please look at the <a href="https://github.com/apollack11/object-recognition">README</a> for the repo.</p>
-
-<h3 id="results">Results</h3>
-<p>The results of training on the Final Dataset are shown in the video above.</p>
-
-<p>Final Dataset</p>
-<ul>
-  <li>Contains images taken from Baxter’s hand camera of an eraser, marker, and screwdriver</li>
-  <li>Training set
-    <ul>
-      <li>171 images of each (85.07% of data)</li>
-    </ul>
-  </li>
-  <li>Test set
-    <ul>
-      <li>30 images of each (14.93% of data)</li>
-    </ul>
-  </li>
-  <li>Accuracy: 0.96667 → 96.67%</li>
-</ul>
-
-<!-- #### Tensorflow  
-Relevant GitHub Repo:
-[learning-tensorflow](https://github.com/apollack11/learning-tensorflow)
-
-I also started looking into object recognition through Tensorflow. I started by completing the tutorials on Tensorflow found [here](https://www.tensorflow.org/tutorials/deep_cnn). One of the tutorials focused on recognizing handwritten digits using data from the MNIST dataset. This problem used a convolutional neural network to train a classifier to recognize handwritten digits. I extended the original solution to save the variables that defined the convolutional neural network so the model could be trained and then used to predict based on individual images. I was able to draw handwritten digits in GIMP and predict the number in the image based on the network. <!-- Below is an example image with prediction. -->
-
-<h3 id="future-work">Future Work</h3>
-<p>I would like to take the knowledge I learned while working on my final project for EECS349 Machine Learning and train a CNN on the ImageNet dataset for three different objects. I believe this would greatly improve the robustness of the system.</p>
-
-<p><strong>References</strong><br />
-[1] Kitani, Kris. “Bag-of-Visual-Words.” <em>Carnegie Mellon University</em>. Web. <a href="http://www.cs.cmu.edu/~16385/lectures/Lecture12.pdf">http://www.cs.cmu.edu/~16385/lectures/Lecture12.pdf</a>.<br />
-[2] Lowe, David G. “Object Recognition from Local Scale-Invariant Features.” <em>Proceedings of the Seventh IEEE International Conference on Computer Vision</em> (1999): n. pag. Web.</p>
+<p>The end result of my efforts to create a 2D quadcopter system was a piece of code which takes xcenter and ycenter as inputs, moves to the (x,y) location defined by these points, tracks a circle with a 1m radius at that point, and returns to the origin. This works robustly for any points within the range x = [-1,1] and y = [-2,2]. Outside of this range, there were problems with computation and the result ends up diverging. I believe it may be possible to fix this by varying the amount of time for each movement. I will explore this concept further when applying this to a 3D quadcopter for the localization project.</p>
 
                 </div>
             </div>

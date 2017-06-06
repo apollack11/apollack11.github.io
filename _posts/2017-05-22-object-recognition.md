@@ -1,7 +1,7 @@
 ---
 layout: inner
 title: 'Object Recognition with Baxter'
-date: 2017-03-18 03:30:00
+date: 2017-05-22 03:30:00
 categories: python scitkit-learn ros
 tags: machine-learning
 video_format: vimeo

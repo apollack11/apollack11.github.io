@@ -5,12 +5,61 @@
     <description></description>
     <link>https://apollack11.github.io/</link>
     <atom:link href="https://apollack11.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 04 Jun 2017 22:15:26 -0500</pubDate>
-    <lastBuildDate>Sun, 04 Jun 2017 22:15:26 -0500</lastBuildDate>
+    <pubDate>Tue, 06 Jun 2017 18:02:56 -0500</pubDate>
+    <lastBuildDate>Tue, 06 Jun 2017 18:02:56 -0500</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
-        <title>Predicting the Presence of Lung Cancer using a CNN</title>
+        <title>Localizing a Quadcopter using the HTC Vive</title>
+        <description>&lt;p&gt;Currently working on setting up localization using Vive Lighthouses and Vive Tracker&lt;/p&gt;
+
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+&lt;p&gt;The goal of this project is to implement a relatively cheap localization setup for a quadcopter using the HTC Vive. This project was proposed by Professor Michael Rubenstein and is intended to be an add-on to his course focused on the creation of a quadcopter from start to finish. The initial plan is to attach a Vive Tracker to one of the quadcopters and try and stabilize the vehicle’s position in space.&lt;/p&gt;
+
+&lt;h3 id=&quot;background&quot;&gt;Background&lt;/h3&gt;
+&lt;p&gt;The HTC Vive system consists of a main headset unit, two lighthouses, and two controllers. The lighthouses are the core element of this system because they track the other three components. Equipped with IR blasters, each lighthouse helps to locate the IR receivers on each of the Vive devices. Using these lighthouses, a system can be created to allow sub-millimeter localization.&lt;/p&gt;
+
+&lt;h3 id=&quot;progress&quot;&gt;Progress&lt;/h3&gt;
+&lt;p&gt;Initial progress so far has been slow due to an initial lack of the required components for the system. The MSR program initially purchased an HTC Vive but our attempts to connect it to our existing computers were unsuccessful as they did not have the required graphics card for use with the Vive. Since discovering this problem, we have purchased a computer with a high-end GPU to run the Vive and it is now up and running. We have also purchased a Vive Tracker to attach to the quadcopter. With these components ready, I can now begin to extract the (x,y) location of the Vive Tracker in space.&lt;/p&gt;
+
+&lt;h3 id=&quot;related-work&quot;&gt;Related Work&lt;/h3&gt;
+&lt;p&gt;Once I have established localization of the quadcopter, I would like to be able to control its position in space and track trajectories based on its position. In preparation for this concept, I focused the efforts of my project in ME454: Optimal Control of Non-Linear Systems on controlling a 2D quadcopter. Below is a brief description and the results of this project.&lt;/p&gt;
+
+&lt;h4 id=&quot;optimal-control-of-a-2d-quadcopter&quot;&gt;Optimal Control of a 2D Quadcopter&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br /&gt;
+This system consists of a rectangular object in two dimensions which has controllable forces at both ends. It can be pictured as a viewing a quadcopter from the side. It is under-actuated (2 controls, 3 degrees of freedom) and therefore I thought it would be a good problem for which to utilize optimal control.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dynamics:&lt;/strong&gt;&lt;br /&gt;
+ddx = (1 / m) * [(F1 + F2) * Sin(theta[t])]&lt;br /&gt;
+ddy = (1 / m) * [(F1 + F2) * Cos(theta[t]) – g]&lt;br /&gt;
+ddtheta = (1 / rotInertia) * [F2 * length/2 – F1 * length/2]&lt;/p&gt;
+
+&lt;p&gt;The dynamics of the system were straightforward and were determined by drawing a free body diagram of the quadcopter. The mass, the length, the height, and the rotational inertia of the quadcopter was determined by looking at the specs of a DJI Mavic quadcopter.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Results:&lt;/strong&gt;&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/2d_quadcopter_control.gif&quot; alt=&quot;2D Quadcopter Control&quot; style=&quot;width: 80%; max-width: 650px; padding: 10px&quot; /&gt;
+  &lt;p&gt;2D Quadcopter tracking the following trajectory: Travel to (1,2), draw a circle with a 1m radius, travel back to origin&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The end result of my efforts to create a 2D quadcopter system was a piece of code which takes xcenter and ycenter as inputs, moves to the (x,y) location defined by these points, tracks a circle with a 1m radius at that point, and returns to the origin. This works robustly for any points within the range x = [-1,1] and y = [-2,2]. Outside of this range, there were problems with computation and the result ends up diverging. I believe it may be possible to fix this by varying the amount of time for each movement. I will explore this concept further when applying this to a 3D quadcopter for the localization project.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 04 Jun 2017 11:30:00 -0500</pubDate>
+        <link>https://apollack11.github.io/quadcopter-localization.html</link>
+        <guid isPermaLink="true">https://apollack11.github.io/quadcopter-localization.html</guid>
+        
+        <category>localization</category>
+        
+        
+        <category>python</category>
+        
+        <category>ros</category>
+        
+      </item>
+    
+      <item>
+        <title>Using a CNN to Predict the Presence of Lung Cancer</title>
         <description>&lt;p&gt;Exploring the parameters of convolutional neural networks to create an accurate image classifier.&lt;/p&gt;
 
 &lt;p&gt;Final GitHub Repo: &lt;a href=&quot;https://github.com/njkaiser/EECS349_Project&quot;&gt;EECS349_Project&lt;/a&gt;&lt;/p&gt;
@@ -162,6 +211,85 @@
       </item>
     
       <item>
+        <title>Object Recognition with Baxter</title>
+        <description>&lt;p&gt;Implementation of the Bag of Words method for object recognition.&lt;/p&gt;
+
+&lt;!-- featured_image: '/assets/object_recognition.gif'
+featured_image_alternate: '/assets/hand_points.jpg' --&gt;
+
+&lt;p&gt;Final GitHub Repo: &lt;a href=&quot;https://github.com/apollack11/object-recognition&quot;&gt;object-recognition&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-goal&quot;&gt;The Goal&lt;/h3&gt;
+&lt;p&gt;I hadn’t gotten a chance to explore machine learning yet at Northwestern, so I decided to center my winter project around the topic. Exploring object recognition seemed like a straightforward yet interesting way to do so. I set out to learn the basics of machine learning and to create a fully-functioning object classifier which could be used on the Baxter robot in our lab to locate and pick up objects.&lt;/p&gt;
+
+&lt;h3 id=&quot;methodology&quot;&gt;Methodology&lt;/h3&gt;
+
+&lt;h4 id=&quot;bag-of-words&quot;&gt;Bag of Words&lt;/h4&gt;
+&lt;p&gt;The video above this post shows the results of a trained classifier using the bag of words method. Bag of words is a four step process which consists of the following&lt;sup&gt;[1]&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;STEP 1:&lt;/strong&gt; Extract Features&lt;br /&gt;
+This step aims to simplify images into a set of smaller features so the classifier doesn’t need to train on every pixel of every image. These features should be unique and should not depend on orientation or scaling. For this step I used the scale-invariant feature transform (SIFT) algorithm implemented through OpenCV. SIFT features are invariant to orientation and uniform scaling and are partially invariant to illumination changes and affine distortion&lt;sup&gt;[2]&lt;/sup&gt;. Due to their robustness, SIFT features seemed ideal for a project which will be demonstrated in a variety of locations with varying lighting conditions and cameras.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;STEP 2:&lt;/strong&gt; Learn Visual Vocabulary&lt;br /&gt;
+The next step is to learn visual vocabulary from the features extracted in Step 1. To do this, the features are put into clusters using unsupervised learning. Specifically, this step with use K-Means Clustering to determine features which are related to each other. I used K-Means Clustering from the Scikit Learn Python package to do this.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;STEP 3:&lt;/strong&gt; Quantize Features using Visual Vocabulary&lt;br /&gt;
+Created a histogram of all the features&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;STEP 4:&lt;/strong&gt; Train Classifier&lt;br /&gt;
+Implemented a Support Vector Machine (SVM) through Scikit Learn which was trained on the extracted features.&lt;/p&gt;
+
+&lt;h4 id=&quot;baxter-implementation&quot;&gt;Baxter Implementation&lt;/h4&gt;
+&lt;p&gt;After completing a working version of a three object classifier, I began work on enabling Baxter to recognize and pick up objects from the table in front of him. To interface with Baxter, I used the Robot Operating System (ROS) in multiple python scripts. One node activates the camera in Baxter’s hand, performs object recognition on each of the three sections of the image, and publishes the location and name of each object as a message. Then a second node sends a desired object message which is read by a third node which moves Baxter’s arm to the location of the object and picks it up. For more specifics of this system, please look at the &lt;a href=&quot;https://github.com/apollack11/object-recognition&quot;&gt;README&lt;/a&gt; for the repo.&lt;/p&gt;
+
+&lt;h3 id=&quot;results&quot;&gt;Results&lt;/h3&gt;
+&lt;p&gt;The results of training on the Final Dataset are shown in the video above.&lt;/p&gt;
+
+&lt;p&gt;Final Dataset&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Contains images taken from Baxter’s hand camera of an eraser, marker, and screwdriver&lt;/li&gt;
+  &lt;li&gt;Training set
+    &lt;ul&gt;
+      &lt;li&gt;171 images of each (85.07% of data)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Test set
+    &lt;ul&gt;
+      &lt;li&gt;30 images of each (14.93% of data)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Accuracy: 0.96667 → 96.67%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- #### Tensorflow  
+Relevant GitHub Repo:
+[learning-tensorflow](https://github.com/apollack11/learning-tensorflow)
+
+I also started looking into object recognition through Tensorflow. I started by completing the tutorials on Tensorflow found [here](https://www.tensorflow.org/tutorials/deep_cnn). One of the tutorials focused on recognizing handwritten digits using data from the MNIST dataset. This problem used a convolutional neural network to train a classifier to recognize handwritten digits. I extended the original solution to save the variables that defined the convolutional neural network so the model could be trained and then used to predict based on individual images. I was able to draw handwritten digits in GIMP and predict the number in the image based on the network. &lt;!-- Below is an example image with prediction. --&gt;
+
+&lt;h3 id=&quot;future-work&quot;&gt;Future Work&lt;/h3&gt;
+&lt;p&gt;I would like to take the knowledge I learned while working on my final project for EECS349 Machine Learning and train a CNN on the ImageNet dataset for three different objects. I believe this would greatly improve the robustness of the system.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;br /&gt;
+[1] Kitani, Kris. “Bag-of-Visual-Words.” &lt;em&gt;Carnegie Mellon University&lt;/em&gt;. Web. &lt;a href=&quot;http://www.cs.cmu.edu/~16385/lectures/Lecture12.pdf&quot;&gt;http://www.cs.cmu.edu/~16385/lectures/Lecture12.pdf&lt;/a&gt;.&lt;br /&gt;
+[2] Lowe, David G. “Object Recognition from Local Scale-Invariant Features.” &lt;em&gt;Proceedings of the Seventh IEEE International Conference on Computer Vision&lt;/em&gt; (1999): n. pag. Web.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 21 May 2017 22:30:00 -0500</pubDate>
+        <link>https://apollack11.github.io/object-recognition.html</link>
+        <guid isPermaLink="true">https://apollack11.github.io/object-recognition.html</guid>
+        
+        <category>machine-learning</category>
+        
+        
+        <category>python</category>
+        
+        <category>scitkit-learn</category>
+        
+        <category>ros</category>
+        
+      </item>
+    
+      <item>
         <title>Estimating Odometry Using Optical Flow</title>
         <description>&lt;p&gt;Using optical flow and an extended Kalman filter to generate more accurate odometry of a Jackal robot.&lt;/p&gt;
 
@@ -257,86 +385,6 @@
         <category>OpenCV</category>
         
         <category>ROS</category>
-        
-      </item>
-    
-      <item>
-        <title>Object Recognition with Baxter</title>
-        <description>&lt;p&gt;Implementation of the Bag of Words method for object recognition.&lt;/p&gt;
-
-&lt;!-- featured_image: '/assets/object_recognition.gif'
-featured_image_alternate: '/assets/hand_points.jpg' --&gt;
-
-&lt;p&gt;Final GitHub Repo: &lt;a href=&quot;https://github.com/apollack11/object-recognition&quot;&gt;object-recognition&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;the-goal&quot;&gt;The Goal&lt;/h3&gt;
-&lt;p&gt;I hadn’t gotten a chance to explore machine learning yet at Northwestern, so I decided to center my winter project around the topic. Exploring object recognition seemed like a straightforward yet interesting way to do so. I set out to learn the basics of machine learning and to create a fully-functioning object classifier which could be used on the Baxter robot in our lab to locate and pick up objects.&lt;/p&gt;
-
-&lt;h3 id=&quot;methodology&quot;&gt;Methodology&lt;/h3&gt;
-
-&lt;h4 id=&quot;bag-of-words&quot;&gt;Bag of Words&lt;/h4&gt;
-&lt;p&gt;The video above this post shows the results of a trained classifier using the bag of words method. Bag of words is a four step process which consists of the following&lt;sup&gt;[1]&lt;/sup&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;STEP 1:&lt;/strong&gt; Extract Features&lt;br /&gt;
-This step aims to simplify images into a set of smaller features so the classifier doesn’t need to train on every pixel of every image. These features should be unique and should not depend on orientation or scaling. For this step I used the scale-invariant feature transform (SIFT) algorithm implemented through OpenCV. SIFT features are invariant to orientation and uniform scaling and are partially invariant to illumination changes and affine distortion&lt;sup&gt;[2]&lt;/sup&gt;. Due to their robustness, SIFT features seemed ideal for a project which will be demonstrated in a variety of locations with varying lighting conditions and cameras.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;STEP 2:&lt;/strong&gt; Learn Visual Vocabulary&lt;br /&gt;
-The next step is to learn visual vocabulary from the features extracted in Step 1. To do this, the features are put into clusters using unsupervised learning. Specifically, this step with use K-Means Clustering to determine features which are related to each other. I used K-Means Clustering from the Scikit Learn Python package to do this.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;STEP 3:&lt;/strong&gt; Quantize Features using Visual Vocabulary&lt;br /&gt;
-Created a histogram of all the features&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;STEP 4:&lt;/strong&gt; Train Classifier&lt;br /&gt;
-Implemented a Support Vector Machine (SVM) through Scikit Learn which was trained on the extracted features.&lt;/p&gt;
-
-&lt;h4 id=&quot;baxter-implementation&quot;&gt;Baxter Implementation&lt;/h4&gt;
-&lt;p&gt;After completing a working version of a three object classifier, I began work on enabling Baxter to recognize and pick up objects from the table in front of him. To interface with Baxter, I used the Robot Operating System (ROS) in multiple python scripts. One script activated the camera in Baxter’s hand performed object recognition on each of the three sections of the image and published the location and name of each object as a message. Then a second script sends a desired object message which is read by a third script which moves Baxter’s arm to the location of the object and picks it up. For more specifics of this system, please look at the &lt;a href=&quot;https://github.com/apollack11/object-recognition&quot;&gt;README&lt;/a&gt; for the repo.&lt;/p&gt;
-
-&lt;h4 id=&quot;results&quot;&gt;Results&lt;/h4&gt;
-&lt;p&gt;The results of training on the Final Dataset are shown in the video above.&lt;/p&gt;
-
-&lt;p&gt;Final Dataset&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Contains images taken from Baxter’s hand camera of an eraser, marker, and screwdriver&lt;/li&gt;
-  &lt;li&gt;Training set
-    &lt;ul&gt;
-      &lt;li&gt;171 images of each (85.07% of data)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Test set
-    &lt;ul&gt;
-      &lt;li&gt;30 images of each (14.93% of data)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Accuracy: 0.96667 → 96.67%&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- #### Tensorflow  
-Relevant GitHub Repo:
-[learning-tensorflow](https://github.com/apollack11/learning-tensorflow)
-
-I also started looking into object recognition through Tensorflow. I started by completing the tutorials on Tensorflow found [here](https://www.tensorflow.org/tutorials/deep_cnn). One of the tutorials focused on recognizing handwritten digits using data from the MNIST dataset. This problem used a convolutional neural network to train a classifier to recognize handwritten digits. I extended the original solution to save the variables that defined the convolutional neural network so the model could be trained and then used to predict based on individual images. I was able to draw handwritten digits in GIMP and predict the number in the image based on the network. &lt;!-- Below is an example image with prediction. --&gt;
-&lt;p&gt;–&amp;gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;future-work&quot;&gt;Future Work&lt;/h3&gt;
-&lt;p&gt;I would like to take the knowledge I learned while working on my final project for EECS349 Machine Learning and train a CNN on the ImageNet dataset for three different objects. I believe this would greatly improve the robustness of the system.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;br /&gt;
-[1] Kitani, Kris. “Bag-of-Visual-Words.” &lt;em&gt;Carnegie Mellon University&lt;/em&gt;. Web. &lt;a href=&quot;http://www.cs.cmu.edu/~16385/lectures/Lecture12.pdf&quot;&gt;http://www.cs.cmu.edu/~16385/lectures/Lecture12.pdf&lt;/a&gt;.
-[2] Lowe, David G. “Object Recognition from Local Scale-Invariant Features.” &lt;em&gt;Proceedings of the Seventh IEEE International Conference on Computer Vision&lt;/em&gt; (1999): n. pag. Web.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 17 Mar 2017 22:30:00 -0500</pubDate>
-        <link>https://apollack11.github.io/object-recognition.html</link>
-        <guid isPermaLink="true">https://apollack11.github.io/object-recognition.html</guid>
-        
-        <category>machine-learning</category>
-        
-        
-        <category>python</category>
-        
-        <category>scitkit-learn</category>
-        
-        <category>ros</category>
         
       </item>
     

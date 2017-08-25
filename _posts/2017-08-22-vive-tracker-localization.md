@@ -8,7 +8,7 @@ featured_image: '/assets/vive_tracker_loc/testrun1_rviz.gif'
 lead_text: 'Final Project for MSR Program'
 ---
 
-Project to develop a software package to derive the pose of the HTC Vive Tracker.  
+Project to develop a software package to derive a 6 DoF pose of the HTC Vive Tracker.  
 
 Final GitHub Repo: [vive_tracker_loc](https://github.com/apollack11/vive_tracker_loc)  
 ROS Package Version: [vive_tracker_loc 'cmake_convert' branch](https://github.com/apollack11/vive_tracker_loc/tree/cmake_convert)
@@ -36,7 +36,9 @@ Once I had a working version of my software package for pose estimation using on
 ### Results  
 To test the accuracy of the pose estimation, I mounted the Vive Tracker to the end effector of the Sawyer robot we have in the MSR lab. Using the ROS package, I was able to perform a brief calibration to determine the location of the lighthouse relative to the base of Sawyer and then visualize the pose estimation of the tracker in Rviz. I then recorded four different movements of Sawyer's arm and played them back to create four test runs. The video below shows both the Rviz visualization and the actual movement of Sawyer and the tracker. In the Rviz portion of the video, the two frames at the end of Sawyer's arm represent the position and orientation of the tracker and Sawyer's gripper (with the tracker offset slightly behind and above the gripper). The frame at the top of the Rviz portion of the video represents the lighthouse.  
 
-<iframe src="https://player.vimeo.com/video/231126775" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<div style="text-align: center;">
+  <iframe src="https://player.vimeo.com/video/231126775" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="width: 80%; height: 400px; max-width: 650px; padding: 10px"></iframe>
+</div>
 
 <div style="text-align: center;">
   <img src="/assets/vive_tracker_loc/sawyer_full.JPG" alt="Sawyer Setup" style="width: 80%; max-width: 650px; padding: 10px"/>

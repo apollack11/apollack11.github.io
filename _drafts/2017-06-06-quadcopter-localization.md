@@ -1,20 +1,27 @@
 ---
 layout: inner
-title: 'Localizing a Quadcopter using the HTC Vive'
+title: 'Localizing the HTC Vive Tracker'
 date: 2017-06-04 16:30:00
-categories: python ros
+categories: C ros
 tags: localization
 featured_image: '/assets/vive_logo.png'
 lead_text: 'Final Project for MSR Program'
 ---
 
+Project to develop a software package to derive the pose of the HTC Vive Tracker.
+
+### Goals  
+
+
 Currently working on setting up localization using Vive Lighthouses and a Vive Tracker.
 
-### Summary  
-The goal of this project is to implement a relatively cheap localization setup for a quadcopter using the HTC Vive. This project was proposed by Professor Michael Rubenstein and is intended to be an add-on to his course focused on the creation of a quadcopter from start to finish. The initial plan is to attach a Vive Tracker to one of the quadcopters and try and stabilize the vehicle's position in space.
+### Summary    
+The goal of this project was to develop a software package to derive the pose of the HTC Vive Tracker. This software package needed to be capable of running on a Raspberry Pi 2 and also only require the Vive Tracker and a Lighthouse to work. This project was proposed by Professor Michael Rubenstein and is intended to be an add-on to his course focused on the creation of a quadrotor from start to finish. He wants to be able to use the pose estimate derived from the Vive Tracker to perform control of the quadrotor.
 
-### Background
-The HTC Vive system consists of a main headset unit, two lighthouses, and two controllers. The lighthouses are the core element of this system because they track the other three components. Equipped with IR blasters, each lighthouse helps to locate the IR receivers on each of the Vive devices. Using these lighthouses, a system can be created to allow sub-millimeter localization.
+### Background  
+The HTC Vive system consists of a main headset unit, two lighthouses, and two controllers. The lighthouses are the core element of this system because they track the other three components. Each lighthouse sends out sweeps and pulses of infrared light. The vive devices (e.g. the headset, controllers, and tracker) are all equipped with IR receivers which detect when they received 
+
+ Equipped with IR blasters, each lighthouse helps to locate the IR receivers on each of the Vive devices. Using these lighthouses, a system can be created to allow sub-millimeter localization.
 
 ### Progress  
 Initial progress so far has been slow due to an initial lack of the required components for the system. The MSR program initially purchased an HTC Vive but our attempts to connect it to our existing computers were unsuccessful as they did not have the required graphics card for use with the Vive. Since discovering this problem, we have purchased a computer with a high-end GPU to run the Vive and it is now up and running. We have also purchased a Vive Tracker to attach to the quadcopter. With these components ready, I can now begin to extract the (x,y) location of the Vive Tracker in space.

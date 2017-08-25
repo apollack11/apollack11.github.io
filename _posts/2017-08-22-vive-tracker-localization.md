@@ -1,7 +1,7 @@
 ---
 layout: inner
 title: 'Localizing the HTC Vive Tracker'
-date: 2017-06-04 16:30:00
+date: 2017-08-22 22:30:00
 categories: C ros
 tags: localization
 featured_image: '/assets/vive_tracker_loc/testrun1_rviz.gif'
